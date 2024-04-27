@@ -1,32 +1,33 @@
 // ./app/page.js
 
-import { GetArticles } from '@/queries/get-articles';
+import { GetLejligheder } from '@/queries/get-lejligheder';
+
 import client from '@/services/apollo-client';
 
 /* Import Next links to add links to the article titles */
-import Link from "next/link";
+import Link from 'next/link';
 
 export const revalidate = 0;
 
 async function getData() {
   const {data} = await client.query({
-    query: GetArticles,
+    query: GetLejligheder,
   });
-  return data.Articles.items;
+  return data.Lejligheder.items;
 }
 
 export default async function Home() {
-  const articles = await getData();
+  const lejligheder = await getData();
 
   return (
     <div>
-      <h1>My blog site</h1>
+      <h1>Kjær Boligudlejning</h1>
       <ul>
-        {articles.map((article) => (
-          <li key={article._id}>
+        {lejligheder.map((lejlighed) => (
+          <li key={lejlighed._id}>
 
-            {/* Add links to the article title and use the article slug to open the new page */}
-            <Link href={article._slug}>{article.title}</Link>
+            {/* Add links to the artice title and use the article slug to open the new page */}
+            {lejlighed.navn}
           </li>
         ))}
       </ul>

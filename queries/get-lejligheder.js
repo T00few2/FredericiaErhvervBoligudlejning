@@ -2,13 +2,12 @@
 
 import { gql } from "@apollo/client";
 
-export const GetArticles = gql`
+export const GetLejligheder = gql`
   query {
-    Articles {
+    Lejligheder {
     items {
       _id
-      _slug
-      title
+      navn
     }
   }
  }

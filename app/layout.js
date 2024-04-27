@@ -1,8 +1,8 @@
 // ./app/layout.js
 
 export const metadata = {
-  title: 'My blog site',
-  description: 'A simple blog app project',
+  title: 'Kjærs Boligudlejning',
+  description: 'Boligudlejning',
 }
 
 export default function RootLayout({ children }) {
