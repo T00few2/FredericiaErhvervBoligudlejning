@@ -25,6 +25,8 @@ export default async function Home() {
 
             {/* Add links to the artice title and use the article slug to open the new page */}
             {lejlighed.navn}
+            {lejlighed.beskrivelse}
+            {lejlighed.billeder.description}
           </li>
         ))}
       </ul>

@@ -8,6 +8,9 @@ export const GetLejligheder = gql`
     items {
       _id
       navn
+      beskrivelse
+      billeder {description
+      author}
     }
   }
  }
