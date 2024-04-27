@@ -1,11 +1,8 @@
 // ./app/page.js
 
-import { GetLejligheder } from '@/queries/get-lejligheder';
 
-import client from '@/services/apollo-client';
-
-/* Import Next links to add links to the article titles */
-import Link from 'next/link';
+import client from '../services/apollo-client';
+import {GetLejligheder} from '../queries/get-lejligheder';
 
 export const revalidate = 0;
 
