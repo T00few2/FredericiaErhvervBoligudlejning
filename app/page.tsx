@@ -11,11 +11,7 @@ async function getData() {
   console.log(`Fetching data at ${timestamp}`);
   const {data} = await client.query({
     query: GetLejligheder,
-    context: {
-      fetchOptions: {
-        next: {revalidate: 1}
-      }
-    }
+    fetchPolicy: 'no-cache'
   });
   return data.Lejligheder.items;
 }

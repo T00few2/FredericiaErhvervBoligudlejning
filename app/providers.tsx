@@ -8,7 +8,7 @@ import client from '../services/apollo-client';
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <ChakraProvider>
-      {/* Wrap your entire application with ApolloProvider */}
+      
       <ApolloProvider client={client}>
         {children}
       </ApolloProvider>
