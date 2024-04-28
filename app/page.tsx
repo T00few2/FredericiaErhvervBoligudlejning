@@ -5,13 +5,14 @@ import {GetLejligheder} from '../queries/get-lejligheder';
 
 import { Image } from '@chakra-ui/react';
 
+export const revalidate = 10;
 
 async function getData() {
   const timestamp = Date.now(); // Get current timestamp
   console.log(`Fetching data at ${timestamp}`);
   const {data} = await client.query({
     query: GetLejligheder,
-    fetchPolicy: 'no-cache'
+    fetchPolicy: 'network-only'
   });
   return data.Lejligheder.items;
 }
