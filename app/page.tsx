@@ -5,7 +5,8 @@ import {GetLejligheder} from '../queries/get-lejligheder';
 
 import { Image } from '@chakra-ui/react';
 
-export const revalidate = 10;
+export const revalidate = 1;
+
 
 async function getData() {
   const timestamp = Date.now(); // Get current timestamp
@@ -17,6 +18,7 @@ async function getData() {
 }
 
 export default async function Page() {
+  
   const timestamp = Date.now(); // Get current timestamp
   console.log(`Page data at ${timestamp}`);
   const lejligheder = await getData();
@@ -24,13 +26,14 @@ export default async function Page() {
     return (
       <div>
         <ul>
+          {timestamp}
           {lejligheder.map((lejlighed) => (
             <li key={lejlighed._id}>
   
               {/* Add links to the artice title and use the article slug to open the new page */}
               {lejlighed.navn}
               {lejlighed.beskrivelse}
-              {lejlighed.billeder.map((billede,index) => (
+              {lejlighed.billeder.map((billede: {url: string},index: number) => (
                 <Image src = {billede.url}  alt={`Image ${index + 1}`} key = {index}></Image>
                 
               ))}
