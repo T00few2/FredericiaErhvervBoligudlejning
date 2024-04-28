@@ -7,7 +7,7 @@ import Apartment from '../components/apartment';
 
 import { Image } from '@chakra-ui/react';
 
-export const revalidate = 0;
+export const revalidate = 10;
 
 
 export default async function Home() {
