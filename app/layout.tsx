@@ -8,8 +8,6 @@ export const metadata = {
   description: 'Boligudlejning',
 }
 
-
-// app/layout.tsx
 import { fonts } from './fonts'
 import { Providers } from './providers'
 

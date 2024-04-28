@@ -6,7 +6,6 @@ import Carousel from '../components/carusel';
 
 import { Image } from '@chakra-ui/react';
 
-export const revalidate = 10;
 
 async function getData() {
   const {data} = await client.query({

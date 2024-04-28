@@ -3,9 +3,8 @@
 import { gql } from "@apollo/client";
 import { loadErrorMessages, loadDevMessages } from "@apollo/client/dev";
 
-
-  loadDevMessages();
-  loadErrorMessages();
+loadDevMessages();
+loadErrorMessages();
 
 export const GetLejligheder = gql`
   query {

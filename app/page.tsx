@@ -8,6 +8,8 @@ import { Image } from '@chakra-ui/react';
 export const revalidate = 10;
 
 async function getData() {
+  const timestamp = Date.now(); // Get current timestamp
+  console.log(`Fetching data at ${timestamp}`);
   const {data} = await client.query({
     query: GetLejligheder,
   });
@@ -15,7 +17,9 @@ async function getData() {
 }
 
 export default async function Page() {
-    const lejligheder = await getData();
+  const timestamp = Date.now(); // Get current timestamp
+  console.log(`Page data at ${timestamp}`);
+  const lejligheder = await getData();
   
     return (
       <div>
