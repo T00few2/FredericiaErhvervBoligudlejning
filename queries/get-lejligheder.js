@@ -1,6 +1,11 @@
-// ./queries/get-articles.js
+// ./queries/get-lejligheder.js
 
 import { gql } from "@apollo/client";
+import { loadErrorMessages, loadDevMessages } from "@apollo/client/dev";
+
+
+  loadDevMessages();
+  loadErrorMessages();
 
 export const GetLejligheder = gql`
   query {
@@ -9,8 +14,7 @@ export const GetLejligheder = gql`
       _id
       navn
       beskrivelse
-      billeder {description
-      author}
+      billeder {author url}
     }
   }
  }
