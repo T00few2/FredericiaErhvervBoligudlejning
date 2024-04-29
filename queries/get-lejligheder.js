@@ -14,6 +14,9 @@ export const GetLejligheder = gql`
       navn
       beskrivelse
       billeder {author url}
+      vrelser
+      kvadratmeter
+      mnedlig_leje
     }
   }
  }

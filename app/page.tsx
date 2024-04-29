@@ -2,8 +2,40 @@
 
 import client from '../services/apollo-client';
 import {GetLejligheder} from '../queries/get-lejligheder';
+import Thumbnails from '../components/thumbnails';
+import { Lejlighed } from '../queries/lejlighed';
+import { FaMobileAlt } from "react-icons/fa";
+import { MdOutlineMail } from "react-icons/md";
 
-import { Image } from '@chakra-ui/react';
+import { IconButton } from '@chakra-ui/react'
+
+
+
+
+import {
+  Box,
+  Button,
+  Container,
+  Flex,
+  Heading,
+  Icon,
+  Stack,
+  Text,
+  useColorModeValue,
+  Link,
+  Divider,
+  AbsoluteCenter,
+  Circle,
+  Card,
+  CardBody,
+  CardBodyProps,
+  CardHeader,
+  SimpleGrid,
+  SimpleGridProps,
+  keyframes,
+  Wrap,
+  
+} from '@chakra-ui/react'
 
 export const revalidate = 10;
 
@@ -18,28 +50,35 @@ async function getData() {
 }
 
 export default async function Page() {
+  const lejligheder: Lejlighed[] = await getData();
   
-  const timestamp = Date.now(); // Get current timestamp
-  console.log(`Page data at ${timestamp}`);
-  const lejligheder = await getData();
   
-    return (
-      <div>
-        <ul>
-          {timestamp}
+  return (
+    <Box p={10}>
+      <Heading textAlign={'center'}>Kjær Ejendomme</Heading>
+      <Wrap justify={'center'} flexWrap={'wrap'} mt={4}>
+        <Flex align="center" flexDirection="column"> {/* Flex container to align items vertically */}
+            <Flex align="center"> {/* Flex container to align items horizontally */}
+            <FaMobileAlt />
+            <Text color='black' whiteSpace="pre-line" ml={2}>xx xx xx xx</Text> {/* Text */}
+            </Flex>
+            
+        </Flex>
+        <Flex align="center" flexDirection="column"> {/* Flex container to align items vertically */}
+            <Flex align="center"> {/* Flex container to align items horizontally */}
+            <MdOutlineMail />
+            <Link href='mailto:someone@some.where' color='black' whiteSpace="pre-line" ml={2}>someone@some.where</Link>
+            </Flex>
+
+        </Flex>
+        </Wrap>
+      <Stack  spacing={4} as={Container} maxW={'5xl'} mt={12} mb={20} align={'center'}>
+        <SimpleGrid spacing={8} minChildWidth='290px' maxWidth='90%'>
           {lejligheder.map((lejlighed) => (
-            <li key={lejlighed._id}>
-  
-              {/* Add links to the artice title and use the article slug to open the new page */}
-              {lejlighed.navn}
-              {lejlighed.beskrivelse}
-              {lejlighed.billeder.map((billede: {url: string},index: number) => (
-                <Image src = {billede.url}  alt={`Image ${index + 1}`} key = {index}></Image>
-                
-              ))}
-            </li>
+                <Thumbnails key={lejlighed._id} lejlighed={lejlighed} />
           ))}
-        </ul>
-      </div>
-    );
-  }
+        </SimpleGrid>
+      </Stack>
+    </Box>
+  );
+}
