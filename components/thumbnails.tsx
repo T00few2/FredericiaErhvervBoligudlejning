@@ -41,8 +41,7 @@ export default function Thumbnails({ lejlighed }: ThumbnailsProps) {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const encodedLatitude = encodeURIComponent(lejlighed.beliggenhed.latitude);
     const encodedLongitude = encodeURIComponent(lejlighed.beliggenhed.longitude);
-    console.log(encodedLongitude)
-    console.log(lejlighed.beliggenhed.longitude)
+
     return (
       
         <Card onClick = {onOpen} height='100%' variant={'elevated'} borderWidth={{ base:'2px', sm: '3px', md:'4px'}} borderRadius="lg" backgroundColor='GhostWhite' borderColor={'WhiteSmoke'}> 

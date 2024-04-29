@@ -55,7 +55,7 @@ export default async function Page() {
   
   return (
     <Box p={10}>
-      <Heading textAlign={'center'}>Kjær Ejendomme</Heading>
+      <Heading textAlign={'center'}>Kjær Boligudlejning</Heading>
       <Wrap justify={'center'} flexWrap={'wrap'} mt={4}>
         <Flex align="center" flexDirection="column"> {/* Flex container to align items vertically */}
             <Flex align="center"> {/* Flex container to align items horizontally */}
