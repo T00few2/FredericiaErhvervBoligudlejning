@@ -7,35 +7,7 @@ import { Lejlighed } from '../queries/lejlighed';
 import { FaMobileAlt } from "react-icons/fa";
 import { MdOutlineMail } from "react-icons/md";
 
-import { IconButton } from '@chakra-ui/react'
-
-
-
-
-import {
-  Box,
-  Button,
-  Container,
-  Flex,
-  Heading,
-  Icon,
-  Stack,
-  Text,
-  useColorModeValue,
-  Link,
-  Divider,
-  AbsoluteCenter,
-  Circle,
-  Card,
-  CardBody,
-  CardBodyProps,
-  CardHeader,
-  SimpleGrid,
-  SimpleGridProps,
-  keyframes,
-  Wrap,
-  
-} from '@chakra-ui/react'
+import {Box, Container, Flex, Heading, Stack, Text, Link, SimpleGrid, Wrap,} from '@chakra-ui/react'
 
 export const revalidate = 10;
 
@@ -51,8 +23,7 @@ async function getData() {
 
 export default async function Page() {
   const lejligheder: Lejlighed[] = await getData();
-  
-  
+
   return (
     <Box p={10}>
       <Heading textAlign={'center'}>Kjær Boligudlejning</Heading>
@@ -74,9 +45,7 @@ export default async function Page() {
         </Wrap>
       <Stack  spacing={4} as={Container} maxW={'5xl'} mt={12} mb={20} align={'center'}>
         <SimpleGrid spacing={8} minChildWidth='290px'>
-          {lejligheder.map((lejlighed) => (
-                <Thumbnails key={lejlighed._id} lejlighed={lejlighed} />
-          ))}
+          <Thumbnails lejligheder={lejligheder} />
         </SimpleGrid>
       </Stack>
     </Box>
