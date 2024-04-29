@@ -45,32 +45,32 @@ export default function Thumbnails({ lejlighed }: ThumbnailsProps) {
     console.log(lejlighed.beliggenhed.longitude)
     return (
       
-        <Card onClick = {onOpen} height='100%' bg={'black'} borderWidth={{ base:'2px', sm: '3px', md:'4px'}} borderRadius="lg" borderColor={'white'}> 
+        <Card onClick = {onOpen} height='100%' variant={'elevated'} borderWidth={{ base:'2px', sm: '3px', md:'4px'}} borderRadius="lg" backgroundColor='GhostWhite' borderColor={'WhiteSmoke'}> 
           <CardBody>
             <Image src = {lejlighed.billeder[0]?.url}  />
-            <Heading size={['sm','sm','md']} mt={4} color={'white'}>{lejlighed.navn}</Heading>
+            <Heading size={['sm','sm','md']} mt={4}>{lejlighed.navn}</Heading>
           </CardBody>
             <CardFooter justify={'space-between'} flexWrap={'wrap'}>
                 <Flex align="center" flexDirection="column"> {/* Flex container to align items vertically */}
                     <Flex align="center"> {/* Flex container to align items horizontally */}
-                    <PiLayout color='white' />
-                    <Text color='white' whiteSpace="pre-line" ml={2}>{lejlighed.vrelser}</Text> {/* Text */}
+                    <PiLayout  />
+                    <Text  whiteSpace="pre-line" ml={2}>{lejlighed.vrelser}</Text> {/* Text */}
                     </Flex>
-                    <Text color='white' textAlign="center">Værelser</Text> {/* Centered text */}
+                    <Text  textAlign="center">Værelser</Text> {/* Centered text */}
                 </Flex>
                 <Flex align="center" flexDirection="column"> {/* Flex container to align items vertically */}
                     <Flex align="center"> {/* Flex container to align items horizontally */}
-                    <SlSizeFullscreen color='white'/>
-                    <Text color='white' whiteSpace="pre-line" ml={2}>{lejlighed.kvadratmeter} m2</Text> {/* Text */}
+                    <SlSizeFullscreen />
+                    <Text  whiteSpace="pre-line" ml={2}>{lejlighed.kvadratmeter} m2</Text> {/* Text */}
                     </Flex>
-                    <Text color='white' textAlign="center">Bolig areal</Text> {/* Centered text */}
+                    <Text  textAlign="center">Bolig areal</Text> {/* Centered text */}
                 </Flex>
                 <Flex align="center" flexDirection="column"> {/* Flex container to align items vertically */}
                     <Flex align="center"> {/* Flex container to align items horizontally */}
-                    <IoPricetagOutline color='white'/>
-                    <Text color='white' whiteSpace="pre-line" ml={2}>{lejlighed.mnedlig_leje} kr</Text> {/* Text */}
+                    <IoPricetagOutline />
+                    <Text  whiteSpace="pre-line" ml={2}>{lejlighed.mnedlig_leje} kr</Text> {/* Text */}
                     </Flex>
-                    <Text color='white' textAlign="center">Pris</Text> {/* Centered text */}
+                    <Text  textAlign="center">Pris</Text> {/* Centered text */}
                 </Flex>
             </CardFooter>
 
@@ -82,7 +82,7 @@ export default function Thumbnails({ lejlighed }: ThumbnailsProps) {
                 backdropInvert='20%'
                 backdropBlur='2px'
                 />
-                <ModalContent >
+                <ModalContent backgroundColor={'GhostWhite'}>
                 <ModalHeader>{lejlighed.navn}</ModalHeader>
                 <ModalCloseButton />
                 <ModalBody>
