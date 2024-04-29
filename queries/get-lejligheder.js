@@ -13,6 +13,10 @@ export const GetLejligheder = gql`
       _id
       navn
       beskrivelse
+      beliggenhed {
+        latitude
+        longitude
+      }
       billeder {author url}
       vrelser
       kvadratmeter

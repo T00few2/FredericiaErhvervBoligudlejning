@@ -73,7 +73,7 @@ export default async function Page() {
         </Flex>
         </Wrap>
       <Stack  spacing={4} as={Container} maxW={'5xl'} mt={12} mb={20} align={'center'}>
-        <SimpleGrid spacing={8} minChildWidth='290px' maxWidth='90%'>
+        <SimpleGrid spacing={8} minChildWidth='290px'>
           {lejligheder.map((lejlighed) => (
                 <Thumbnails key={lejlighed._id} lejlighed={lejlighed} />
           ))}

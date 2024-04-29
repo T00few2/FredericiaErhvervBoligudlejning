@@ -37,7 +37,12 @@ interface ThumbnailsProps {
   }
 
 export default function Thumbnails({ lejlighed }: ThumbnailsProps) {
+    
     const { isOpen, onOpen, onClose } = useDisclosure();
+    const encodedLatitude = encodeURIComponent(lejlighed.beliggenhed.latitude);
+    const encodedLongitude = encodeURIComponent(lejlighed.beliggenhed.longitude);
+    console.log(encodedLongitude)
+    console.log(lejlighed.beliggenhed.longitude)
     return (
       
         <Card onClick = {onOpen} height='100%' bg={'black'} borderWidth={{ base:'2px', sm: '3px', md:'4px'}} borderRadius="lg" borderColor={'white'}> 
@@ -111,7 +116,7 @@ export default function Thumbnails({ lejlighed }: ThumbnailsProps) {
                     <Text mt={4}>{lejlighed.beskrivelse}</Text>
                     <Heading size ='lg' mt={4}>Kort</Heading>
                     <AspectRatio ratio={16 / 9} mt={4} mb={4}>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2255.5733072667017!2d9.746948777307264!3d55.574627573018795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464c90e1c275712b%3A0x9aeb07b6685484dc!2sN%C3%B8rrebrogade%2073%2C%207000%20Fredericia!5e0!3m2!1sda!2sdk!4v1714403932830!5m2!1sda!2sdk"></iframe>
+                    <iframe src={`https://www.google.com/maps?q=${encodedLatitude},${encodedLongitude}&z=15&output=embed`}></iframe>
                     </AspectRatio>
                     </ModalBody>
 
