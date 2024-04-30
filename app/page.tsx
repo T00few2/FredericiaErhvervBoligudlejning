@@ -7,7 +7,7 @@ import { Lejlighed } from '../queries/lejlighed';
 import { FaMobileAlt } from "react-icons/fa";
 import { MdOutlineMail } from "react-icons/md";
 
-import {Box, Container, Flex, Heading, Stack, Text, Link, SimpleGrid, Wrap,} from '@chakra-ui/react'
+import {Box, Container, Flex, Heading, Stack, Text, Link, SimpleGrid, Wrap, Grid} from '@chakra-ui/react'
 
 export const revalidate = 10;
 
@@ -25,7 +25,7 @@ export default async function Page() {
   const lejligheder: Lejlighed[] = await getData();
 
   return (
-    <Box p={10}>
+    <Grid p={10}>
       <Heading textAlign={'center'}>Kjær Boligudlejning</Heading>
       <Wrap justify={'center'} flexWrap={'wrap'} mt={4}>
         <Flex align="center" flexDirection="column"> {/* Flex container to align items vertically */}
@@ -48,6 +48,6 @@ export default async function Page() {
           <Thumbnails lejligheder={lejligheder} />
         </SimpleGrid>
       </Stack>
-    </Box>
+    </Grid>
   );
 }
