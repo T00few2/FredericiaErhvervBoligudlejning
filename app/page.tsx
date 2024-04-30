@@ -25,7 +25,8 @@ export default async function Page() {
   const lejligheder: Lejlighed[] = await getData();
 
   return (
-    <Grid p={4}>
+    
+    <Grid mt={8} alignContent={'center'} alignItems={'center'} justifyContent={'center'} alignSelf={'center'} justifySelf={'center'}>
       <Heading textAlign={'center'}>Kjær Boligudlejning</Heading>
       <Wrap justify={'center'} flexWrap={'wrap'} mt={4}>
         <Flex align="center" flexDirection="column"> {/* Flex container to align items vertically */}

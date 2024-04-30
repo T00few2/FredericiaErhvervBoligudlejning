@@ -77,7 +77,7 @@ const AppartmentCard: React.FC<AppartmentProps>=({lejlighed}) => {
               backdropInvert='20%'
               backdropBlur='2px'
               />
-              <ModalContent backgroundColor={'GhostWhite'}>
+              <ModalContent backgroundColor={'GhostWhite'} justifyContent={'center'}>
               <ModalHeader>{lejlighed.navn}</ModalHeader>
               <ModalCloseButton />
               <ModalBody>
