@@ -7,7 +7,7 @@ import { Lejlighed } from '../queries/lejlighed';
 import { FaMobileAlt } from "react-icons/fa";
 import { MdOutlineMail } from "react-icons/md";
 
-import {Box, Container, Flex, Heading, Stack, Text, Link, SimpleGrid, Wrap, Grid} from '@chakra-ui/react'
+import {Box, Container, Flex, Heading, Stack, Text, Link, SimpleGrid, Wrap, Grid, Image} from '@chakra-ui/react'
 
 export const revalidate = 10;
 
@@ -27,7 +27,10 @@ export default async function Page() {
   return (
     
     <Grid mt={8} alignContent={'center'} alignItems={'center'} justifyContent={'center'} alignSelf={'center'} justifySelf={'center'}>
+      <Flex justifyContent={'center'}>
       <Heading textAlign={'center'}>Kjær Boligudlejning</Heading>
+      <Image boxSize='40px'  src='Logo.svg'/>
+      </Flex>
       <Wrap justify={'center'} flexWrap={'wrap'} mt={4}>
         <Flex align="center" flexDirection="column"> {/* Flex container to align items vertically */}
             <Flex align="center"> {/* Flex container to align items horizontally */}
@@ -49,6 +52,7 @@ export default async function Page() {
           <Thumbnails lejligheder={lejligheder} />
         </SimpleGrid>
       </Stack>
+      
     </Grid>
   );
 }
