@@ -40,7 +40,7 @@ const AppartmentCard: React.FC<AppartmentProps>=({lejlighed}) => {
   const encodedLongitude = encodeURIComponent(lejlighed.beliggenhed.longitude);
 
   return (
-      <Card onClick = {onOpen} height='100%' variant={'elevated'} borderWidth={{ base:'2px', sm: '3px', md:'4px'}} borderRadius="lg" backgroundColor='GhostWhite' borderColor={'WhiteSmoke'}> 
+      <Card onClick = {onOpen} variant={'elevated'} borderWidth={{ base:'2px', sm: '3px', md:'4px'}} borderRadius="lg" backgroundColor='GhostWhite' borderColor={'WhiteSmoke'}> 
       <CardBody>
           <Image src = {lejlighed.billeder[0]?.url}  />
           <Heading size={['sm','sm','md']} mt={4}>{lejlighed.navn}</Heading>
