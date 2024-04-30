@@ -45,7 +45,7 @@ const Thumbnails: React.FC<ThumbnailsProps> = ({ lejligheder }) => {
                         <Switch mb={2} id='ledig' isChecked={ledig} onChange={handleSwitchChange}/>
                     </FormControl>
                 </HStack>
-                <SimpleGrid spacing={4} templateColumns='repeat(auto-fill, minmax(400px, 1fr))'>
+                <SimpleGrid spacing={4} templateColumns='repeat(auto-fill, minmax(350px, 1fr))'>
                     {lejligheder
                         .filter(lejlighed => (!selectedVærelser || lejlighed.vrelser === selectedVærelser) && (!ledig || lejlighed.status !== ledig))
                         .map(lejlighed => (
