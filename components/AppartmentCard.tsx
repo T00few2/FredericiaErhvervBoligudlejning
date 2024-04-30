@@ -78,7 +78,7 @@ const AppartmentCard: React.FC<AppartmentProps>=({lejlighed}) => {
               backdropBlur='2px'
               />
               <ModalContent backgroundColor={'GhostWhite'} justifyContent={'center'}>
-              <ModalHeader>{lejlighed.navn}</ModalHeader>
+              <ModalHeader fontSize={'3xl'} fontWeight={'700'}>{lejlighed.navn}</ModalHeader>
               <ModalCloseButton />
               <ModalBody>
               <Carousel

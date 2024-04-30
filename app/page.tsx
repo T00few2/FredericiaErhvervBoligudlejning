@@ -12,8 +12,6 @@ import {Box, Container, Flex, Heading, Stack, Text, Link, SimpleGrid, Wrap, Grid
 export const revalidate = 10;
 
 async function getData() {
-  const timestamp = Date.now(); // Get current timestamp
-  console.log(`Fetching data at ${timestamp}`);
   const {data} = await client.query({
     query: GetLejligheder,
     fetchPolicy: 'network-only'

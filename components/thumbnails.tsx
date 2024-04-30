@@ -13,7 +13,6 @@ interface ThumbnailsProps {
 const Thumbnails: React.FC<ThumbnailsProps> = ({ lejligheder }) => {
     const [selectedVærelser, setSelectedVærelser] = useState<string | null>(null);
     const [ledig, setLedig] = useState<boolean>(false);
-    console.log(lejligheder)
 
     // Handler for select change
     const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
