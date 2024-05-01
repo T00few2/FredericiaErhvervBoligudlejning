@@ -10,7 +10,7 @@ const EmailSchema = z
 
 export async function POST(
     req: NextApiRequest,
-    res: NextApiResponse<Data>)  {
+    res: NextApiResponse)  {
     
     const body = await new Response(req.body).text()
     const email = JSON.parse(body).email;
