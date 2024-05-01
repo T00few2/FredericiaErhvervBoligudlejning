@@ -6,6 +6,7 @@ import Thumbnails from '../components/thumbnails';
 import { Lejlighed } from '../queries/lejlighed';
 import { FaMobileAlt } from "react-icons/fa";
 import { MdOutlineMail } from "react-icons/md";
+import Newsletter from '../components/newsletter';
 
 import {Box, Container, Flex, Heading, Stack, Text, Link, SimpleGrid, Wrap, Grid, Image} from '@chakra-ui/react'
 
@@ -42,8 +43,8 @@ export default async function Page() {
             <MdOutlineMail />
             <Link href='mailto:someone@some.where' color='black' whiteSpace="pre-line" ml={2}>someone@some.where</Link>
             </Flex>
-
         </Flex>
+        <Newsletter/>
         </Wrap>
       <Stack  spacing={4} as={Container} maxW={'5xl'} mt={12} mb={20} align={'center'}>
         <SimpleGrid spacing={8} minChildWidth='290px'>
