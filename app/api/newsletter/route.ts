@@ -9,8 +9,8 @@ const EmailSchema = z
   .email({ message: "Please enter a valid email address" });
 
 export async function POST(
-    req: NextApiRequest,
-    res: NextApiResponse)  {
+    req: Request,
+    res: Response)  {
     
     const body = await new Response(req.body).text()
     const email = JSON.parse(body).email;
