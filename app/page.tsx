@@ -8,7 +8,7 @@ import { FaMobileAlt } from "react-icons/fa";
 import { MdOutlineMail } from "react-icons/md";
 import Newsletter from '../components/newsletter';
 
-import {Box, Container, Flex, Heading, Stack, Text, Link, SimpleGrid, Wrap, Grid, Image} from '@chakra-ui/react'
+import {Box, Container, Flex, Heading, Stack, Text, Link, SimpleGrid, Wrap, Grid, Image, Tooltip} from '@chakra-ui/react'
 
 export const revalidate = 10;
 
@@ -44,8 +44,15 @@ export default async function Page() {
             <Link href='mailto:someone@some.where' color='black' whiteSpace="pre-line" ml={2}>someone@some.where</Link>
             </Flex>
         </Flex>
-        </Wrap>
+        
+        
+          
         <Newsletter/>
+       
+   
+      
+        </Wrap>
+        
       <Stack  spacing={4} as={Container} maxW={'5xl'} mt={12} mb={20} align={'center'}>
         <SimpleGrid spacing={8} minChildWidth='290px'>
           <Thumbnails lejligheder={lejligheder} />

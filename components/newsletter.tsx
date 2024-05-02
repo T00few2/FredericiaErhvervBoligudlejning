@@ -1,10 +1,14 @@
 'use client'
 import { FormEvent, useState } from "react";
 import axios from "axios";
-import { Button, Input, Wrap, HStack, Tooltip } from "@chakra-ui/react";
+import { Button, Input, Wrap, VStack, Tooltip, Modal, ModalHeader, ModalBody,ModalOverlay, ModalContent, ModalCloseButton, Icon, Text, Flex } from "@chakra-ui/react";
+import { useDisclosure } from '@chakra-ui/react';
+import { FaRegNewspaper } from "react-icons/fa";
 
 const Newsletter = () => {
+    const { isOpen, onOpen, onClose } = useDisclosure();
   const [email, setEmail] = useState<string>("");
+  const [name, setName] = useState<string>('');
   const [status, setStatus] = useState<
     "success" | "error" | "loading" | "idle"
   >("idle");
@@ -17,8 +21,8 @@ const Newsletter = () => {
     setStatus("loading");
     try {
       const response = await axios.post("api/newsletter", { 
-        email: email });
-        console.log(email)
+        email: email,
+        name: name });
       setStatus("success");
       setStatusCode(response.status);
       setEmail("");
@@ -34,33 +38,62 @@ const Newsletter = () => {
   }
 
   return (
-    <Wrap justify={'center'} flexWrap={'wrap'} mt={4}>
+    <div>
+        <Flex  align="center" flexDirection="column"> {/* Flex container to align items vertically */}
+        <Flex align="center"> {/* Flex container to align items horizontally */}
+            <Icon onClick = {onOpen} as={FaRegNewspaper} />
+            <Text onClick = {onOpen} color='black' whiteSpace="pre-line" ml={2}>Nyhedsbrev</Text> {/* Text */}
+        </Flex>
+        </Flex>
+  
+  
+    <Modal isOpen={isOpen} onClose={onClose} motionPreset='scale' size ={{ base:'sm', sm: 'xl', md:'3xl'}} scrollBehavior={'inside'}>
+              
+              <ModalOverlay       
+              bg='blackAlpha.700'
+              backdropFilter='auto'
+              backdropInvert='20%'
+              backdropBlur='2px'
+              />
+              <ModalContent backgroundColor={'GhostWhite'} justifyContent={'center'}>
+              <ModalHeader fontSize={'3xl'} fontWeight={'700'}>Nyhedsbrev</ModalHeader>
+              <ModalCloseButton />
+              <ModalBody>
+                <Text>Tilmeld dig vores mail liste og få besked når der kommer ledige ledligheder</Text>
+              <Wrap justify={'left'} flexWrap={'wrap'} mt={4}>
       <form
         
         onSubmit={handleSubscribe}
       >
-        <Tooltip label='Tilmeld dig vores mail liste og få besked når der kommer ledige ledligheder'>
-         <HStack align={'center'}>
+        
          
+         <Input
+            type="text"
+            placeholder="Navn"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            disabled={status == "loading"}
+            size={'md'}
+          />
           <Input
             type="email"
             placeholder="E-mail"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             disabled={status == "loading"}
-            size={'sm'}
+            size={'md'}
           />
           
             <Button
-                size={'sm'}
+                size={'md'}
                 type="submit"
                 disabled={status == "loading"}
                 backgroundColor={'WhiteSmoke'}
             >Tilmeld
             </Button>
           
-          </HStack>
-          </Tooltip>
+        
+          
         <div className="server-message pt-4 text-green-600">
           {status === "success" ? (
             <p className="text-green-600">{responseMsg}</p>
@@ -71,6 +104,13 @@ const Newsletter = () => {
         </div>
       </form>
     </Wrap>
+                
+                  </ModalBody>
+
+              </ModalContent>
+          </Modal>
+          </div>
+        
   );
 };
 
