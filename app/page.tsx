@@ -44,16 +44,9 @@ export default async function Page() {
             <Link href='mailto:someone@some.where' color='black' whiteSpace="pre-line" ml={2}>someone@some.where</Link>
             </Flex>
         </Flex>
-        
-        
-          
         <Newsletter/>
-       
-   
-      
         </Wrap>
-        
-      <Stack  spacing={4} as={Container} maxW={'5xl'} mt={12} mb={20} align={'center'}>
+        <Stack  spacing={4} as={Container} maxW={'5xl'} mt={12} mb={20} align={'center'}>
         <SimpleGrid spacing={8} minChildWidth='290px'>
           <Thumbnails lejligheder={lejligheder} />
         </SimpleGrid>

@@ -8,7 +8,9 @@ import { FaRegNewspaper } from "react-icons/fa";
 const Newsletter = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
   const [email, setEmail] = useState<string>("");
-  const [name, setName] = useState<string>('');
+  const [first_name, setFirstName] = useState<string>('');
+  const [last_name, setLastName] = useState<string>('');
+  const [phone_number, setPhoneNumber] = useState<string>('');
   const [status, setStatus] = useState<
     "success" | "error" | "loading" | "idle"
   >("idle");
@@ -22,7 +24,9 @@ const Newsletter = () => {
     try {
       const response = await axios.post("api/newsletter", { 
         email: email,
-        name: name });
+        fname: first_name,
+        lname: last_name,
+        phone: phone_number, });
       setStatus("success");
       setStatusCode(response.status);
       setEmail("");
@@ -65,13 +69,28 @@ const Newsletter = () => {
         
         onSubmit={handleSubscribe}
       >
-        
-         
+
          <Input
             type="text"
-            placeholder="Navn"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            placeholder="Fornavn"
+            value={first_name}
+            onChange={(e) => setFirstName(e.target.value)}
+            disabled={status == "loading"}
+            size={'md'}
+          />
+        <Input
+            type="text"
+            placeholder="Efternavn"
+            value={last_name}
+            onChange={(e) => setLastName(e.target.value)}
+            disabled={status == "loading"}
+            size={'md'}
+          />
+        <Input
+            type="text"
+            placeholder="Telefon nummer"
+            value={phone_number}
+            onChange={(e) => setPhoneNumber(e.target.value)}
             disabled={status == "loading"}
             size={'md'}
           />
