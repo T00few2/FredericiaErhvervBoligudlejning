@@ -80,7 +80,7 @@ const Newsletter = () => {
                 <Text mb={4}>Tilmeld dig vores mail liste og få besked når der kommer ledige ledligheder</Text>
              
               <form onSubmit={handleSubscribe}>
-                <SimpleGrid columns={2} spacing={4}>
+                <SimpleGrid columns={{ base:1, sm: 1, md:2}} spacing={4}>
                     <GridItem>
                         <FormLabel>Fornavn</FormLabel>
                         <Input
