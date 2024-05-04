@@ -31,6 +31,8 @@ import { AspectRatio } from '@chakra-ui/react'
 import { PiLayout } from "react-icons/pi";
 import { SlSizeFullscreen } from "react-icons/sl";
 import { IoPricetagOutline } from "react-icons/io5";
+import { CiVault } from "react-icons/ci";
+import { LiaFileInvoiceDollarSolid } from "react-icons/lia";
 
 // Ribbon component
 const Ribbon = ({ text }) => {
@@ -115,6 +117,24 @@ const AppartmentCard: React.FC<AppartmentProps>=({lejlighed}) => {
                           <Text color='black' whiteSpace="pre-line" ml={2}>{lejlighed.kvadratmeter} m2</Text> {/* Text */}
                           </Flex>
                           <Text color='black' textAlign="center">Bolig areal</Text> {/* Centered text */}
+                      </Flex>
+                      <Flex align="center" flexDirection="column"> {/* Flex container to align items vertically */}
+                          <Flex align="center"> {/* Flex container to align items horizontally */}
+                          <CiVault color='black'/>
+                          <Text whiteSpace="pre-line" ml={2} color={lejlighed.status ? "white" : 'black'}>
+                            {lejlighed.status ? "XXXX" : lejlighed.depositum + " mdr"}
+                          </Text>
+                          </Flex>
+                          <Text color='black' textAlign="center">Depositum</Text> {/* Centered text */}
+                      </Flex>
+                      <Flex align="center" flexDirection="column"> {/* Flex container to align items vertically */}
+                          <Flex align="center"> {/* Flex container to align items horizontally */}
+                          <LiaFileInvoiceDollarSolid color='black'/>
+                          <Text whiteSpace="pre-line" ml={2} color={lejlighed.status ? "white" : 'black'}>
+                            {lejlighed.status ? "XXXX" : lejlighed.aconto + " kr"}
+                          </Text>
+                          </Flex>
+                          <Text color='black' textAlign="center">Aconto</Text> {/* Centered text */}
                       </Flex>
                       <Flex align="center" flexDirection="column"> {/* Flex container to align items vertically */}
                           <Flex align="center"> {/* Flex container to align items horizontally */}

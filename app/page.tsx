@@ -31,7 +31,7 @@ export default async function Page() {
     
     <Grid mt={8} alignContent={'center'} alignItems={'center'} justifyContent={'center'} alignSelf={'center'} justifySelf={'center'}>
       <Flex justifyContent={'center'}>
-      <Heading textAlign={'center'}>Kjær Boligudlejning</Heading>
+      <Heading textAlign={'center'} mr={2} fontFamily={'Roboto'} fontWeight={900} >Kjær Boligudlejning</Heading>
       <Image boxSize='40px'  src='Logo.svg'/>
       </Flex>
       <Wrap justify={'center'} flexWrap={'wrap'} mt={4}>

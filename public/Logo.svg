@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg viewBox="200.712 105.685 130.41 188.852" xmlns="http://www.w3.org/2000/svg">
-  <polyline style="stroke-linecap: round; stroke-linejoin: round; stroke-dashoffset: -7px; stroke-width: 14px; stroke: rgb(0, 0, 0); fill: none; paint-order: fill markers; transform-origin: 266.15px 200.206px;" points="287.92 255.68 288.587 189.584 267.825 157.125 242.37 190.174 242.37 285.778 322.08 286.367 323.418 186.633 269.834 114.045 208.882 189.585 208.882 258.63"/>
+<svg viewBox="325.289 150.74 74.714 78.37" xmlns="http://www.w3.org/2000/svg">
+  <polyline style="stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 8px; paint-order: fill markers; fill: none;" points="377.052 207.87 377.092 195.411 362.158 182.52 347.224 195.411 347.224 221.193 392.025 221.193 392.025 182.52 362.158 156.74 332.289 182.52 332.289 208.302" transform="matrix(1, 0, 0, 1, 0, 7.105427357601002e-15)"/>
 </svg>

@@ -22,6 +22,8 @@ export const GetLejligheder = gql`
       vrelser
       kvadratmeter
       mnedlig_leje
+      aconto
+      depositum
     }
   }
  }
