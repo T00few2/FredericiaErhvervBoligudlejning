@@ -1,9 +1,12 @@
 'use client'
 import { FormEvent, useState } from "react";
 import axios from "axios";
-import { Button, Input, Wrap, VStack, Tooltip, Modal, ModalHeader, ModalBody,ModalOverlay, ModalContent, ModalCloseButton, Icon, Text, Flex, SimpleGrid, Textarea } from "@chakra-ui/react";
+import { Button, Input, Wrap, VStack, Tooltip, Modal, ModalHeader, ModalBody,ModalOverlay, ModalContent, ModalCloseButton, IconButton, Text, Flex, SimpleGrid, Textarea } from "@chakra-ui/react";
 import { useDisclosure } from '@chakra-ui/react';
 import { FaRegNewspaper } from "react-icons/fa";
+import { IoMdListBox } from "react-icons/io";
+import { MdList } from "react-icons/md";
+import { MdPlaylistAddCheck } from "react-icons/md";
 import {
     FormControl,
     FormLabel,
@@ -59,8 +62,9 @@ const Newsletter = () => {
     <div>
         <Flex align="center" flexDirection="column"> {/* Flex container to align items vertically */}
         <Flex align="center"> {/* Flex container to align items horizontally */}
-            <Icon onClick = {onOpen} as={FaRegNewspaper} />
-            <Text onClick = {onOpen} color='black' whiteSpace="pre-line" ml={2}>Mailliste</Text> {/* Text */}
+        <Tooltip label='Tilmeld mailliste'>
+            <IconButton aria-label='mail' onClick = {onOpen} icon={<MdPlaylistAddCheck  fontSize={30}/>} ml={2}/>
+          </Tooltip>
         </Flex>
         </Flex>
   

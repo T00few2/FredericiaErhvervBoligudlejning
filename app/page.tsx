@@ -5,10 +5,14 @@ import {GetLejligheder} from '../queries/get-lejligheder';
 import Thumbnails from '../components/thumbnails';
 import { Lejlighed } from '../queries/lejlighed';
 import { FaMobileAlt } from "react-icons/fa";
-import { MdOutlineMail } from "react-icons/md";
+import { MdEmail, MdCall } from "react-icons/md";
+import { FaSms } from "react-icons/fa";
+import { IoMdListBox } from "react-icons/io";
 import Newsletter from '../components/newsletter';
+import { IoIosCall } from "react-icons/io";
+import { IoCall } from "react-icons/io5";
 
-import {Box, Container, Flex, Heading, Stack, Text, Link, SimpleGrid, Wrap, Grid, Image, Tooltip} from '@chakra-ui/react'
+import {Box, Container, Flex, Heading, Stack, Text, Link, SimpleGrid, Wrap, Grid, Image, Tooltip, IconButton} from '@chakra-ui/react'
 
 export const revalidate = 10;
 
@@ -31,21 +35,17 @@ export default async function Page() {
       <Image boxSize='40px'  src='Logo.svg'/>
       </Flex>
       <Wrap justify={'center'} flexWrap={'wrap'} mt={4}>
-        <Flex align="center" flexDirection="column"> {/* Flex container to align items vertically */}
-            <Flex align="center"> {/* Flex container to align items horizontally */}
-            <FaMobileAlt />
-            <Link href='tel:+4522996421' color='black' whiteSpace="pre-line" ml={2}>22 99 64 21</Link> {/* Text */}
-            </Flex>
-            
-        </Flex>
-        <Flex align="center" flexDirection="column"> {/* Flex container to align items vertically */}
-            <Flex align="center"> {/* Flex container to align items horizontally */}
-            <MdOutlineMail />
-            <Link href='mailto:annettekjaer2@yahoo.dk' color='black' whiteSpace="pre-line" ml={2}>Annette Kjær Djernum</Link>
-            </Flex>
-        </Flex>
-        <Newsletter/>
-        </Wrap>
+        <Tooltip label='Ring 22 99 64 21'>
+          <Link href='tel:+4522996421' color='black' whiteSpace="pre-line" ml={2}><IconButton aria-label='Ring' icon={<MdCall  fontSize={30} />}></IconButton></Link>
+        </Tooltip>
+        <Tooltip label='SMS 22 99 64 21'>
+          <Link href='sms:+4522996421' color='black' whiteSpace="pre-line" ml={2}><IconButton aria-label='SMS' icon={<FaSms fontSize={30}/>} /></Link> 
+        </Tooltip>
+        <Tooltip label='Email annettekjaer2@yahoo.dk'>
+          <Link href='mailto:annettekjaer2@yahoo.dk' color='black' whiteSpace="pre-line" ml={2}><IconButton aria-label='Mail' icon={<MdEmail fontSize={30}/>} /></Link>
+        </Tooltip>
+          <Newsletter/>
+      </Wrap>
         <Stack  spacing={4} as={Container} maxW={'5xl'} mt={12} mb={20} align={'center'}>
         <SimpleGrid spacing={8} minChildWidth='290px'>
           <Thumbnails lejligheder={lejligheder} />
