@@ -5,6 +5,7 @@ import { Lejlighed } from '../queries/lejlighed';
 import { CardFooter, Image } from '@chakra-ui/react';
 import { useDisclosure } from '@chakra-ui/react';
 import Carousel from './carusel';
+import './css/ribbon.css'
 
 import {
   Modal,
@@ -23,12 +24,22 @@ import {
   Stack,
   Box,
   Wrap,
+  
 } from '@chakra-ui/react'
 import { AspectRatio } from '@chakra-ui/react'
 
 import { PiLayout } from "react-icons/pi";
 import { SlSizeFullscreen } from "react-icons/sl";
 import { IoPricetagOutline } from "react-icons/io5";
+
+// Ribbon component
+const Ribbon = ({ text }) => {
+    return (
+      <div className="ribbon">
+        <span>{text}</span>
+      </div>
+    );
+  };
 
 interface AppartmentProps {
   lejlighed: Lejlighed;
@@ -40,7 +51,11 @@ const AppartmentCard: React.FC<AppartmentProps>=({lejlighed}) => {
   const encodedLongitude = encodeURIComponent(lejlighed.beliggenhed.longitude);
 
   return (
+    
       <Card onClick = {onOpen} variant={'elevated'} borderWidth={{ base:'2px', sm: '3px', md:'4px'}} borderRadius="lg" backgroundColor='GhostWhite' borderColor={'WhiteSmoke'}> 
+       {lejlighed.status == true && (
+            <Ribbon text="Udlejet" />
+        )}
       <CardBody>
           <Image src = {lejlighed.billeder[0]?.url}  />
           <Heading size={['sm','sm','md']} mt={4}>{lejlighed.navn}</Heading>

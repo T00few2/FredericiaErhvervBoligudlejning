@@ -34,14 +34,14 @@ export default async function Page() {
         <Flex align="center" flexDirection="column"> {/* Flex container to align items vertically */}
             <Flex align="center"> {/* Flex container to align items horizontally */}
             <FaMobileAlt />
-            <Text color='black' whiteSpace="pre-line" ml={2}>xx xx xx xx</Text> {/* Text */}
+            <Link href='tel:+4522996421' color='black' whiteSpace="pre-line" ml={2}>22 99 64 21</Link> {/* Text */}
             </Flex>
             
         </Flex>
         <Flex align="center" flexDirection="column"> {/* Flex container to align items vertically */}
             <Flex align="center"> {/* Flex container to align items horizontally */}
             <MdOutlineMail />
-            <Link href='mailto:someone@some.where' color='black' whiteSpace="pre-line" ml={2}>someone@some.where</Link>
+            <Link href='mailto:annettekjaer2@yahoo.dk' color='black' whiteSpace="pre-line" ml={2}>Annette Kjær Djernum</Link>
             </Flex>
         </Flex>
         <Newsletter/>

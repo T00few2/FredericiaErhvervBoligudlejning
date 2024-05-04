@@ -148,7 +148,7 @@ const Newsletter = () => {
                         size={'lg'}
                         type="submit"
                         disabled={status == "loading"}
-                        backgroundColor={'Green'}
+                        backgroundColor={'LightSteelBlue'}
                     >Tilmeld
                     </Button>
                     </Wrap>
