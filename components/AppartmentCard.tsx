@@ -78,7 +78,9 @@ const AppartmentCard: React.FC<AppartmentProps>=({lejlighed}) => {
               <Flex align="center" flexDirection="column"> {/* Flex container to align items vertically */}
                   <Flex align="center"> {/* Flex container to align items horizontally */}
                   <IoPricetagOutline />
-                  <Text  whiteSpace="pre-line" ml={2}>{lejlighed.mnedlig_leje} kr</Text> {/* Text */}
+                  <Text whiteSpace="pre-line" ml={2} color={lejlighed.status ? "white" : 'black'}>
+                    {lejlighed.status ? "XXXX" : lejlighed.mnedlig_leje + " kr"}
+                  </Text>
                   </Flex>
                   <Text  textAlign="center">Pris</Text> {/* Centered text */}
               </Flex>
@@ -117,7 +119,9 @@ const AppartmentCard: React.FC<AppartmentProps>=({lejlighed}) => {
                       <Flex align="center" flexDirection="column"> {/* Flex container to align items vertically */}
                           <Flex align="center"> {/* Flex container to align items horizontally */}
                           <IoPricetagOutline color='black'/>
-                          <Text color='black' whiteSpace="pre-line" ml={2}>{lejlighed.mnedlig_leje} kr</Text> {/* Text */}
+                          <Text whiteSpace="pre-line" ml={2} color={lejlighed.status ? "white" : 'black'}>
+                            {lejlighed.status ? "XXXX" : lejlighed.mnedlig_leje + " kr"}
+                          </Text>
                           </Flex>
                           <Text color='black' textAlign="center">Pris</Text> {/* Centered text */}
                       </Flex>
