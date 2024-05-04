@@ -4,9 +4,8 @@
     left: 0px; /* Adjust left position to cover the card */
     height: 100%;
     width: 100%;
-    background-color: #000000; /* Change the color as needed */
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    
     transform: rotate(0deg);
     z-index: 1;
     clip-path: polygon(0% -10%, 100% 90%, 100% 110%, 0% 10%);
