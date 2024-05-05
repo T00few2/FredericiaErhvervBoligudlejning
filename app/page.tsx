@@ -30,9 +30,9 @@ export default async function Page() {
   return (
     
     <Grid mt={8} alignContent={'center'} alignItems={'center'} justifyContent={'center'} alignSelf={'center'} justifySelf={'center'}>
-      <Flex justifyContent={'center'} alignItems="center">
-      <Heading textAlign={'center'} mr={2} fontFamily={'Roboto'} fontWeight={900} fontSize={{base:30, sm:40, md:40}}>Kjær Boligudlejning</Heading>
-      <Image boxSize={{base:'30px', sm:'40px', md:'40px'}}  src='Logo.svg'/>
+      <Flex justifyContent={'center'}>
+      
+      <Image objectFit={'contain'} maxW={{base:'90vw', sm:'80vw', md:'60vw'}} mb={{base:1, sm:2, md:4}} src='Logo.svg'/>
       </Flex>
       <Wrap justify={'center'} flexWrap={'wrap'} mt={4}>
         <Tooltip label='Ring 22 99 64 21'>
