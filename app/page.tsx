@@ -11,8 +11,30 @@ import { IoMdListBox } from "react-icons/io";
 import Newsletter from '../components/newsletter';
 import { IoIosCall } from "react-icons/io";
 import { IoCall } from "react-icons/io5";
+import { Metadata } from "next";
 
 import {Box, Container, Flex, Heading, Stack, Text, Link, SimpleGrid, Wrap, Grid, Image, Tooltip, IconButton} from '@chakra-ui/react'
+
+export const metadata: Metadata = {
+  title: 'Fredericia Boligudlejning',
+  description: 'Udlejning af lejligheder i Fredericia.',
+
+  metadataBase: new URL('https://www.fredericiabolig.com/'),
+
+  openGraph: {
+    title: 'Fredericia Boligudlejning',
+    description: 'Udlejning af lejligheder i Fredericia.',
+    url: 'https://www.fredericiabolig.com/',
+    siteName: 'Fredericia Boligudlejning',
+    images: [
+      {
+        url: '/Logo.svg',
+      },
+    ],
+    type: 'website',
+    locale: 'da_DK',
+  }
+}
 
 export const revalidate = 10;
 

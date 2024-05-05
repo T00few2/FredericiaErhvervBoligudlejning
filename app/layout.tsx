@@ -1,7 +1,7 @@
 // ./app/layout.js
 
 // app/layout.tsx
-
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata = {
   title: 'Kjærs Boligudlejning',
@@ -19,7 +19,10 @@ export default function RootLayout({
   return (
     <html lang='en' className={fonts.rubik.variable}>
       <body style={{ backgroundColor: 'Snow' }}>
-        <Providers>{children}</Providers>
+        <Providers>
+          {children}
+          <Analytics />
+        </Providers>
       </body>
     </html>
   )
