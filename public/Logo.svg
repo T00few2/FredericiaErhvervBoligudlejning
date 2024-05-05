@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg viewBox="94.044 150.74 305.959 77.478" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
   <defs>
-    <style bx:fonts="Roboto">@import url(https://fonts.googleapis.com/css2?family=Roboto%3Aital%2Cwght%400%2C100%3B0%2C300%3B0%2C400%3B0%2C500%3B0%2C700%3B0%2C900%3B1%2C100%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C700%3B1%2C900&amp;display=swap);</style>
+    <style  bx:fonts="Roboto">@import url(https://fonts.googleapis.com/css2?family=Roboto%3Aital%2Cwght%400%2C100%3B0%2C300%3B0%2C400%3B0%2C500%3B0%2C700%3B0%2C900%3B1%2C100%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C700%3B1%2C900&amp;display=swap);</style>
   </defs>
   <polyline style="stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; paint-order: fill markers; fill: none; stroke-width: 7px;" points="377.052 208.828 377.092 196.369 362.158 183.479 347.224 196.369 347.224 222.151 392.025 222.151 392.025 183.479 362.158 157.699 332.289 183.479 332.289 209.261"/>
   <text style="font-family: Roboto; font-size: 21px; font-weight: 900; text-transform: capitalize; white-space: pre;" transform="matrix(1.5931811332702637, 0, 0, 1.5931811332702637, -55.425689697265625, -118.37539672851562)"><tspan x="94.286" y="187.17">Fredericia</tspan><tspan x="94.286" dy="1.2em">​</tspan><tspan>Boligudlejning</tspan></text>
