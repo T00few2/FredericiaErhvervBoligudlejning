@@ -54,7 +54,7 @@ export default async function Page() {
     <Grid mt={8} alignContent={'center'} alignItems={'center'} justifyContent={'center'} alignSelf={'center'} justifySelf={'center'}>
       <Flex justifyContent={'center'}>
       
-      <Image objectFit={'contain'} maxW={{base:'95vw', sm:'80vw', md:'60vw'}} mb={{base:1, sm:2, md:4}} src='Logo.svg'/>
+      <Image objectFit={'contain'} maxW={{base:'95vw', sm:'80vw', md:'60vw'}} mb={{base:1, sm:2, md:4}} src='FEB.png'/>
       </Flex>
       <Wrap justify={'center'} flexWrap={'wrap'} mt={4}>
         <Tooltip label='Ring 22 99 64 21'>
