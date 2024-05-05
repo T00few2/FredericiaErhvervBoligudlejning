@@ -2,12 +2,6 @@
 
 // app/layout.tsx
 import { Analytics } from "@vercel/analytics/react"
-
-export const metadata = {
-  title: 'Kjærs Boligudlejning',
-  description: 'Boligudlejning',
-}
-
 import { fonts } from './fonts'
 import { Providers } from './providers'
 
