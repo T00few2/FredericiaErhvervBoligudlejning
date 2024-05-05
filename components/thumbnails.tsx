@@ -47,10 +47,12 @@ const Thumbnails: React.FC<ThumbnailsProps> = ({ lejligheder }) => {
                 <SimpleGrid spacing={4} templateColumns='repeat(auto-fill, minmax(350px, 1fr))'>
                     {lejligheder
                         .filter(lejlighed => (!selectedVærelser || lejlighed.vrelser === selectedVærelser) && (!ledig || lejlighed.status !== ledig))
+                        .sort((a, b) => a.navn.localeCompare(b.navn)) // Sort by lejlighed.navn
                         .map(lejlighed => (
                             <AppartmentCard key={lejlighed._id} lejlighed={lejlighed} />
-                    ))} 
-                </SimpleGrid>
+                ))} 
+</SimpleGrid>
+
             </VStack>
         </div>
     );
