@@ -16,13 +16,13 @@ import { Metadata } from "next";
 import {Box, Container, Flex, Heading, Stack, Text, Link, SimpleGrid, Wrap, Grid, Image, Tooltip, IconButton} from '@chakra-ui/react'
 
 export const metadata: Metadata = {
-  title: 'Fredericia Boligudlejning',
+  title: 'Fredericia Erhverv Boligudlejning',
   description: 'Udlejning af lejligheder i Fredericia.',
 
   metadataBase: new URL('https://www.fredericiabolig.com/'),
 
   openGraph: {
-    title: 'Fredericia Boligudlejning',
+    title: 'Fredericia Erhverv Boligudlejning',
     description: 'Udlejning af lejligheder i Fredericia.',
     url: 'https://www.fredericiabolig.com/',
     siteName: 'Fredericia Boligudlejning',
