@@ -29,6 +29,9 @@ export const metadata: Metadata = {
     images: [
       {
         url: 'https://www.fredericiabolig.com/logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'Fredericia Boligudlejning'
       },
     ],
     type: 'website',
