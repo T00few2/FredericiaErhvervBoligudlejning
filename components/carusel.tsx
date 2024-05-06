@@ -7,6 +7,7 @@ import { Box, IconButton, useBreakpointValue, Image } from '@chakra-ui/react'
 import { MdOutlineKeyboardArrowRight, MdOutlineKeyboardArrowLeft } from "react-icons/md";
 // And react-slick as our Carousel Lib
 import Slider from 'react-slick'
+import './css/carusel.css'
 
 
 // Settings for the slider
@@ -86,8 +87,9 @@ export default function Carousel({cards}: ImagesProps) {
       {/* Slider */}
       <Slider {...settings} ref={(slider) => setSlider(slider)}>
         {cards.map((url, index) => (
-          <Image src={url} alt={`Image ${index + 1}`} key = {index}></Image>
-
+          <div className="image-container" key={index}>
+            <img src={url} alt={`Image ${index + 1}`} />
+          </div>
         ))}
       </Slider>
     </Box>
