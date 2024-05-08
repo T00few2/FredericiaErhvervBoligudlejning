@@ -1,7 +1,7 @@
 'use client'
 import { FormEvent, useState } from "react";
 import axios from "axios";
-import { Button, Input, Wrap, VStack, Tooltip, Modal, ModalHeader, ModalBody,ModalOverlay, ModalContent, ModalCloseButton, IconButton, Text, Flex, SimpleGrid, Textarea } from "@chakra-ui/react";
+import { Button, Input, Wrap, useToast, VStack, Tooltip, Modal, ModalHeader, ModalBody,ModalOverlay, ModalContent, ModalCloseButton, IconButton, Text, Flex, SimpleGrid, Textarea } from "@chakra-ui/react";
 import { useDisclosure } from '@chakra-ui/react';
 import { FaRegNewspaper } from "react-icons/fa";
 import { IoMdListBox } from "react-icons/io";
@@ -21,6 +21,7 @@ const Newsletter = () => {
 
   const isError = input === ''
   const { isOpen, onOpen, onClose } = useDisclosure();
+
   const [email, setEmail] = useState<string>("");
   const [first_name, setFirstName] = useState<string>('');
   const [last_name, setLastName] = useState<string>('');
@@ -31,7 +32,8 @@ const Newsletter = () => {
   >("idle");
   const [responseMsg, setResponseMsg] = useState<string>("");
   const [statusCode, setStatusCode] = useState<number>();
-    
+  const toast = useToast()
+   
   async function handleSubscribe(e: FormEvent<HTMLFormElement>) {
     
     e.preventDefault();
@@ -47,13 +49,28 @@ const Newsletter = () => {
       setStatus("success");
       setStatusCode(response.status);
       setEmail("");
-      setResponseMsg(response.data.message);
+      setFirstName("");
+      setLastName("");
+      setPhoneNumber("");
+      setWish("");
+      toast({
+        description: response.data,
+        status: 'success',
+        duration: 9000,
+        isClosable: true,
+      })
     } catch (err) {
       
       if (axios.isAxiosError(err)) {
         setStatus("error");
         setStatusCode(err.response?.status);
         setResponseMsg(err.response?.data.error);
+        toast({
+          description: err.response.data,
+          status: 'error',
+          duration: 9000,
+          isClosable: true,
+        })
       }
     }
   }
