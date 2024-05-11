@@ -16,22 +16,22 @@ import { Metadata } from "next";
 import {Box, Container, Flex, Heading, Stack, Text, Link, SimpleGrid, Wrap, Grid, Image, Tooltip, IconButton} from '@chakra-ui/react'
 
 export const metadata: Metadata = {
-  title: 'Fredericia Erhverv Boligudlejning',
-  description: 'Udlejning af lejligheder i Fredericia.',
+  title: 'Din næste leje lejlighed i Fredericia | Fredericia Erhverv Boligudlejning',
+  description: 'Find din næste lejlighed til leje i Fredericia hos Fredericia Erhverv Boligudlejning. Gennemse vores lejligheder, hver med oplysninger om antal værelser, kvadratmeter og lejepriser. Find lejligheden der passer til dine behov!',
 
   metadataBase: new URL('https://www.fredericiabolig.com/'),
 
   openGraph: {
-    title: 'Fredericia Erhverv Boligudlejning',
-    description: 'Udlejning af lejligheder i Fredericia.',
+    title: 'Din næste leje lejlighed i Fredericia | Fredericia Erhverv Boligudlejning',
+    description: 'Find din næste lejlighed til leje i Fredericia hos Fredericia Erhverv Boligudlejning. Gennemse vores lejligheder, hver med oplysninger om antal værelser, kvadratmeter og lejepriser. Find lejligheden der passer til dine behov!',
     url: 'https://www.fredericiabolig.com/',
-    siteName: 'Fredericia Boligudlejning',
+    siteName: 'Fredericia Erhverv Boligudlejning',
     images: [
       {
         url: 'https://www.fredericiabolig.com/logo.png',
         width: 1200,
         height: 630,
-        alt: 'Fredericia Boligudlejning'
+        alt: 'Fredericia Boligudlejning Logo'
       },
     ],
     type: 'website',
