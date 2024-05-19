@@ -17,7 +17,7 @@ import Footer from '../components/footer';
 import {Box, Container, Flex, Heading, Stack, Text, Link, SimpleGrid, Wrap, Grid, Image, Tooltip, IconButton} from '@chakra-ui/react'
 
 export const metadata: Metadata = {
-  title: 'Din næste leje lejlighed i Fredericia | Fredericia Erhverv Boligudlejning',
+  title: 'Fredericia Erhverv Boligudlejning',
   description: 'Find din næste lejlighed til leje i Fredericia hos Fredericia Erhverv Boligudlejning. Gennemse vores lejligheder, hver med oplysninger om antal værelser, kvadratmeter og lejepriser. Find lejligheden der passer til dine behov!',
 
   metadataBase: new URL('https://www.fredericiabolig.com/'),
