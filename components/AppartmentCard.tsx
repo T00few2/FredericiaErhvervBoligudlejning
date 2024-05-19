@@ -54,7 +54,7 @@ const AppartmentCard: React.FC<AppartmentProps>=({lejlighed}) => {
 
   return (
     
-      <Card onClick = {onOpen} variant={'elevated'} borderWidth={{ base:'2px', sm: '3px', md:'4px'}} borderRadius="lg" backgroundColor='GhostWhite' borderColor={'WhiteSmoke'}> 
+      <Card onClick = {onOpen} variant={'elevated'} borderWidth={{ base:'2px', sm: '3px', md:'4px'}} borderRadius="lg" backgroundColor='GhostWhite' borderColor={'WhiteSmoke'} _hover={{ cursor: 'pointer' }}> 
        {lejlighed.status == true && (
             <Ribbon text="Udlejet" />
         )}

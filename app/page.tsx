@@ -12,6 +12,7 @@ import Newsletter from '../components/newsletter';
 import { IoIosCall } from "react-icons/io";
 import { IoCall } from "react-icons/io5";
 import { Metadata } from "next";
+import Footer from '../components/footer';
 
 import {Box, Container, Flex, Heading, Stack, Text, Link, SimpleGrid, Wrap, Grid, Image, Tooltip, IconButton} from '@chakra-ui/react'
 
@@ -76,7 +77,7 @@ export default async function Page() {
           <Thumbnails lejligheder={lejligheder} />
         </SimpleGrid>
       </Stack>
-      
+      <Footer/>
     </Grid>
   );
 }
