@@ -59,7 +59,9 @@ const AppartmentCard: React.FC<AppartmentProps>=({lejlighed}) => {
             <Ribbon text="Udlejet" />
         )}
       <CardBody>
-          <Image src = {lejlighed.billeder[0]?.url}  />
+        
+          <Image objectFit='cover' aspectRatio={16/9} src = {lejlighed.billeder[0]?.url} style={{ width: '100%', height: 'auto' }} />
+        
           <Heading size={['sm','sm','md']} mt={4}>{lejlighed.navn}</Heading>
       </CardBody>
           <CardFooter justify={'space-between'} flexWrap={'wrap'}>
