@@ -60,7 +60,7 @@ const AppartmentCard: React.FC<AppartmentProps>=({lejlighed}) => {
         )}
       <CardBody>
         
-          <Image objectFit='cover' aspectRatio={16/9} src = {lejlighed.billeder[0]?.url} style={{ width: '100%', height: 'auto' }} />
+          <Image objectFit='cover' aspectRatio={4/3} src = {lejlighed.billeder[0]?.url} style={{ width: '100%', height: 'auto' }} />
         
           <Heading size={['sm','sm','md']} mt={4}>{lejlighed.navn}</Heading>
       </CardBody>
@@ -151,7 +151,7 @@ const AppartmentCard: React.FC<AppartmentProps>=({lejlighed}) => {
                   <Heading size ='lg' mt={4}>Beskrivelse</Heading>
                   <Text mt={4}>{lejlighed.beskrivelse}</Text>
                   <Heading size ='lg' mt={4}>Kort</Heading>
-                  <AspectRatio ratio={16 / 9} mt={4} mb={4}>
+                  <AspectRatio ratio={4 / 3} mt={4} mb={4}>
                   <iframe src={`https://www.google.com/maps?q=${encodedLatitude},${encodedLongitude}&z=15&output=embed`}></iframe>
                   </AspectRatio>
                   </ModalBody>
