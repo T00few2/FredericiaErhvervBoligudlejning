@@ -80,7 +80,7 @@ const Newsletter = () => {
         <Flex align="center" flexDirection="column"> {/* Flex container to align items vertically */}
         <Flex align="center"> {/* Flex container to align items horizontally */}
         <Tooltip label='Tilmeld mailliste'>
-            <IconButton aria-label='mail' onClick = {onOpen} icon={<MdPlaylistAddCheck  fontSize={30}/>} ml={2}/>
+            <IconButton aria-label='mail' onClick = {onOpen} color={'#041D6Eff'} icon={<MdPlaylistAddCheck  fontSize={30}/>} ml={2}/>
           </Tooltip>
         </Flex>
         </Flex>

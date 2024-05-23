@@ -12,7 +12,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en' className={fonts.rubik.variable}>
-      <body style={{ backgroundColor: 'Snow' }}>
+      <body style={{ backgroundColor: 'White' }}>
         <Providers>
           {children}
           <Analytics />
