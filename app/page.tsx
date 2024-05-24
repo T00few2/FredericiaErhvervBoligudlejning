@@ -62,13 +62,13 @@ export default async function Page() {
       </Flex>
       <Wrap justify={'center'} flexWrap={'wrap'} mt={4}>
         <Tooltip label='Ring 22 99 64 21'>
-          <Link href='tel:+4522996421' color='black' whiteSpace="pre-line" ml={2}><IconButton aria-label='Ring' color={'#041D6Eff'} icon={<MdCall  fontSize={30} />}></IconButton></Link>
+          <Link href='tel:+4522996421' color='black' whiteSpace="pre-line" ml={2}><IconButton aria-label='Ring' color='rgb(27,52,90)' icon={<MdCall  fontSize={30} />}></IconButton></Link>
         </Tooltip>
         <Tooltip label='SMS 22 99 64 21'>
-          <Link href='sms:+4522996421' color='black' whiteSpace="pre-line" ml={2}><IconButton aria-label='SMS' color={'#041D6Eff'} icon={<FaSms fontSize={30}/>} /></Link> 
+          <Link href='sms:+4522996421' color='black' whiteSpace="pre-line" ml={2}><IconButton aria-label='SMS' color='rgb(27,52,90)' icon={<FaSms fontSize={30}/>} /></Link> 
         </Tooltip>
         <Tooltip label='Email annettekjaer2@yahoo.dk'>
-          <Link href='mailto:annettekjaer2@yahoo.dk' color='black' whiteSpace="pre-line" ml={2}><IconButton aria-label='Mail' color={'#041D6Eff'} icon={<MdEmail fontSize={30}/>} /></Link>
+          <Link href='mailto:annettekjaer2@yahoo.dk' color='black' whiteSpace="pre-line" ml={2}><IconButton aria-label='Mail' color='rgb(27,52,90)' icon={<MdEmail fontSize={30}/>} /></Link>
         </Tooltip>
           <Newsletter/>
       </Wrap>
