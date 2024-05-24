@@ -14,6 +14,7 @@ export const GetLejligheder = gql`
       navn
       beskrivelse
       status
+      ledig_pr
       beliggenhed {
         latitude
         longitude

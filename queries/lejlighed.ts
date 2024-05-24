@@ -2,6 +2,7 @@ export interface Lejlighed {
     _id: string;
     navn: string;
     status: boolean;
+    ledig_pr: Date;
     beliggenhed: {
       latitude: number;
       longitude: number;

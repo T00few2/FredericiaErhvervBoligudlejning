@@ -33,6 +33,7 @@ import { SlSizeFullscreen } from "react-icons/sl";
 import { IoPricetagOutline } from "react-icons/io5";
 import { CiVault } from "react-icons/ci";
 import { LiaFileInvoiceDollarSolid } from "react-icons/lia";
+import { MdOutlineEventAvailable } from "react-icons/md";
 
 // Ribbon component
 const Ribbon = ({ text }) => {
@@ -51,6 +52,8 @@ const AppartmentCard: React.FC<AppartmentProps>=({lejlighed}) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const encodedLatitude = encodeURIComponent(lejlighed.beliggenhed.latitude);
   const encodedLongitude = encodeURIComponent(lejlighed.beliggenhed.longitude);
+  const today = new Date();
+  
 
   return (
     
@@ -119,6 +122,16 @@ const AppartmentCard: React.FC<AppartmentProps>=({lejlighed}) => {
                           <Text color='black' whiteSpace="pre-line" ml={2}>{lejlighed.kvadratmeter} m2</Text> {/* Text */}
                           </Flex>
                           <Text color='black' textAlign="center">Bolig areal</Text> {/* Centered text */}
+                      </Flex>
+                      <Flex align="center" flexDirection="column"> {/* Flex container to align items vertically */}
+                          <Flex align="center"> {/* Flex container to align items horizontally */}
+                          <MdOutlineEventAvailable color='black'/>
+                          <Text whiteSpace="pre-line" ml={2} color={lejlighed.status ? "white" : 'black'}>
+                            
+                          {lejlighed.status ? "XXXX" : (!lejlighed.ledig_pr || new Date(lejlighed.ledig_pr) < today ? "Nu" : lejlighed.ledig_pr + "")}
+                          </Text>
+                          </Flex>
+                          <Text color='black' textAlign="center">Ledig fra</Text> {/* Centered text */}
                       </Flex>
                       <Flex align="center" flexDirection="column"> {/* Flex container to align items vertically */}
                           <Flex align="center"> {/* Flex container to align items horizontally */}
