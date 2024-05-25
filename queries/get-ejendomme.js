@@ -1,4 +1,4 @@
-// ./queries/get-lejligheder.js
+// ./queries/get-ejendomme.js
 
 import { gql } from "@apollo/client";
 import { loadErrorMessages, loadDevMessages } from "@apollo/client/dev";
@@ -6,25 +6,18 @@ import { loadErrorMessages, loadDevMessages } from "@apollo/client/dev";
 loadDevMessages();
 loadErrorMessages();
 
-export const GetLejligheder = gql`
+export const GetEjendomme = gql`
   query {
-    Lejligheder(limit:100) {
+    Ejendomme(limit:100) {
     items {
       _id
       navn
-      beskrivelse
       status
-      ledig_pr
       beliggenhed {
         latitude
         longitude
       }
       billeder {author url}
-      vrelser
-      kvadratmeter
-      mnedlig_leje
-      aconto
-      depositum
     }
   }
  }

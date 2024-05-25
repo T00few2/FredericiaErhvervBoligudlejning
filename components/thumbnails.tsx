@@ -45,22 +45,19 @@ const Thumbnails: React.FC<ThumbnailsProps> = ({ lejligheder }) => {
                     </FormControl>
                 </HStack>
                 <SimpleGrid spacing={4} templateColumns='repeat(auto-fill, minmax(350px, 1fr))'>
-    {lejligheder
-        .filter(lejlighed => (!selectedVærelser || lejlighed.vrelser === selectedVærelser) && (!ledig || lejlighed.status !== ledig))
-        .sort((a, b) => {
-            if (a.status === b.status) {
-                return a.navn.localeCompare(b.navn); // If statuses are the same, sort by navn
-            }
-            return (a.status === b.status) ? 0 : a.status ? 1 : -1; // Convert boolean to number for comparison
-        })
-        .map(lejlighed => (
-            <AppartmentCard key={lejlighed._id} lejlighed={lejlighed} />
-    ))} 
-</SimpleGrid>
-
-
-
-            </VStack>
+                    {lejligheder
+                        .filter(lejlighed => (!selectedVærelser || lejlighed.vrelser === selectedVærelser) && (!ledig || lejlighed.status !== ledig))
+                        .sort((a, b) => {
+                            if (a.status === b.status) {
+                                return a.navn.localeCompare(b.navn); // If statuses are the same, sort by navn
+                            }
+                            return (a.status === b.status) ? 0 : a.status ? 1 : -1; // Convert boolean to number for comparison
+                        })
+                        .map(lejlighed => (
+                            <AppartmentCard key={lejlighed._id} lejlighed={lejlighed} />
+                    ))} 
+                </SimpleGrid>
+        </VStack>
         </div>
     );
 };

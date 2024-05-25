@@ -2,8 +2,10 @@
 
 import client from '../services/apollo-client';
 import {GetLejligheder} from '../queries/get-lejligheder';
+import {GetEjendomme} from '../queries/get-ejendomme';
 import Thumbnails from '../components/thumbnails';
 import { Lejlighed } from '../queries/lejlighed';
+import { Ejendom } from '../queries/ejendom';
 import { FaMobileAlt } from "react-icons/fa";
 import { MdEmail, MdCall } from "react-icons/md";
 import { FaSms } from "react-icons/fa";
@@ -42,7 +44,7 @@ export const metadata: Metadata = {
 
 export const revalidate = 10;
 
-async function getData() {
+async function getDataLejligheder() {
   const {data} = await client.query({
     query: GetLejligheder,
     fetchPolicy: 'network-only'
@@ -50,8 +52,19 @@ async function getData() {
   return data.Lejligheder.items;
 }
 
+async function getDataEjendomme() {
+  const {data} = await client.query({
+    query: GetEjendomme,
+    fetchPolicy: 'network-only'
+  });
+  return data.Ejendomme.items;
+}
+
+
 export default async function Page() {
-  const lejligheder: Lejlighed[] = await getData();
+  const lejligheder: Lejlighed[] = await getDataLejligheder();
+  const ejendomme: Ejendom[] = await getDataEjendomme();
+  console.log(ejendomme)
 
   return (
     
