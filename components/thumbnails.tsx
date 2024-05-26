@@ -23,7 +23,7 @@ const Thumbnails: React.FC<ThumbnailsProps> = ({ lejligheder, ejendomme }) => {
     const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         const { value } = event.target;
         setSelectedVærelser(value);
-        console.log(selectedVærelser)
+        console.log("sel" + selectedVærelser)
     };
 
     // Handler for switch change
@@ -62,7 +62,7 @@ const Thumbnails: React.FC<ThumbnailsProps> = ({ lejligheder, ejendomme }) => {
                         .map(lejlighed => (
                             <AppartmentCard key={lejlighed._id} lejlighed={lejlighed} />
                     ))}
-                    {selectedVærelser == '' && !ledig && ejendomme
+                    {(selectedVærelser === '' || selectedVærelser === null) && !ledig && ejendomme
                         .filter(ejendom => ejendom.status)
                         .map(ejendom =>(
                         <PropertyCard key={ejendom._id} ejendom={ejendom} />
