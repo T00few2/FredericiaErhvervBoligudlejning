@@ -23,7 +23,6 @@ const Thumbnails: React.FC<ThumbnailsProps> = ({ lejligheder, ejendomme }) => {
     const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         const { value } = event.target;
         setSelectedVærelser(value);
-        console.log("sel" + selectedVærelser)
     };
 
     // Handler for switch change

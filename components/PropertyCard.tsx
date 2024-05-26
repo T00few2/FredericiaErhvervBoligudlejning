@@ -57,9 +57,9 @@ const PropertyCard: React.FC<PropertyProps>=({ejendom}) => {
 
   return (
     
-      <Card onClick = {onOpen} variant={'elevated'} borderWidth={{ base:'2px', sm: '3px', md:'4px'}} borderRadius="lg" backgroundColor='GhostWhite' borderColor={'WhiteSmoke'} _hover={{ cursor: 'pointer' }}> 
+      <Card onClick = {onOpen} variant={'elevated'} borderWidth={{ base:'2px', sm: '3px', md:'4px'}} borderRadius="lg" backgroundColor='#EDF2F7' borderColor={'#E2E8F0'} _hover={{ cursor: 'pointer' }}> 
        {ejendom.status == true && (
-            <Ribbon text="Ingen Ledige Lejligheder" />
+            <Ribbon text="Ingen ledige lejligheder" />
         )}
       <CardBody>
         

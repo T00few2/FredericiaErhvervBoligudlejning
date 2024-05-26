@@ -6,20 +6,22 @@
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    transform: rotate(0deg);
+    
     z-index: 1;
-    clip-path: polygon(0% -10%, 100% 90%, 100% 110%, 0% 10%);
+    clip-path: polygon(0% 00%, 100% 00%, 100% 100%, 0% 100%);
   }
   
   .ribbon span {
     position: absolute;
-    top: 50%; 
+    top: 30%; 
     left: 50%;
     display: inline-block;
-    transform: translate(-50%, -50%) rotate(44deg);
+    
     font-weight: bold;
     white-space: nowrap; /* Ensure text stays on one line */
     text-align: center;
+    transform-origin: center;
+    transform: translate(-50%, -50%) ; /* Initially centered */
   }
   
 @media screen and (max-width: 768px) {
