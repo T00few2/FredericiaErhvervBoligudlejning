@@ -3,21 +3,27 @@
 
 import React, { useState } from 'react';
 import { Lejlighed } from '../queries/lejlighed';
+import { Ejendom } from '../queries/ejendom';
 import AppartmentCard from './AppartmentCard';
+import PropertyCard from './PropertyCard';
 import { SimpleGrid, Select, VStack, HStack, Wrap,Switch, FormControl, FormLabel } from '@chakra-ui/react';
 
 interface ThumbnailsProps {
     lejligheder: Lejlighed[];
+    ejendomme: Ejendom[];
 }
 
-const Thumbnails: React.FC<ThumbnailsProps> = ({ lejligheder }) => {
+
+const Thumbnails: React.FC<ThumbnailsProps> = ({ lejligheder, ejendomme }) => {
     const [selectedVærelser, setSelectedVærelser] = useState<string | null>(null);
     const [ledig, setLedig] = useState<boolean>(false);
+    lejligheder = lejligheder.filter(lejlighed => !lejlighed.status)
 
     // Handler for select change
     const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         const { value } = event.target;
         setSelectedVærelser(value);
+        console.log(selectedVærelser)
     };
 
     // Handler for switch change
@@ -55,7 +61,12 @@ const Thumbnails: React.FC<ThumbnailsProps> = ({ lejligheder }) => {
                         })
                         .map(lejlighed => (
                             <AppartmentCard key={lejlighed._id} lejlighed={lejlighed} />
-                    ))} 
+                    ))}
+                    {selectedVærelser == '' && !ledig && ejendomme
+                        .filter(ejendom => ejendom.status)
+                        .map(ejendom =>(
+                        <PropertyCard key={ejendom._id} ejendom={ejendom} />
+                    ))}
                 </SimpleGrid>
         </VStack>
         </div>

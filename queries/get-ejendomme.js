@@ -13,6 +13,7 @@ export const GetEjendomme = gql`
       _id
       navn
       status
+      beskrivelse
       beliggenhed {
         latitude
         longitude

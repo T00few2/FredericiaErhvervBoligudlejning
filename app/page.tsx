@@ -87,7 +87,7 @@ export default async function Page() {
       </Wrap>
         <Stack  spacing={4} as={Container} maxW={'5xl'} mt={12} mb={20} align={'center'}>
         <SimpleGrid spacing={8} minChildWidth='290px'>
-          <Thumbnails lejligheder={lejligheder} />
+          <Thumbnails lejligheder={lejligheder} ejendomme={ejendomme}/>
         </SimpleGrid>
       </Stack>
       <Footer/>
