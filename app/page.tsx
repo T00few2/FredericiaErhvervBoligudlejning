@@ -80,8 +80,8 @@ export default async function Page() {
         <Tooltip label='SMS 22 99 64 21'>
           <Link href='sms:+4522996421' color='black' whiteSpace="pre-line" ml={2}><IconButton aria-label='SMS' color='rgb(27,52,90)' icon={<FaSms fontSize={30}/>} /></Link> 
         </Tooltip>
-        <Tooltip label='Email annettekjaer2@yahoo.dk'>
-          <Link href='mailto:annettekjaer2@yahoo.dk' color='black' whiteSpace="pre-line" ml={2}><IconButton aria-label='Mail' color='rgb(27,52,90)' icon={<MdEmail fontSize={30}/>} /></Link>
+        <Tooltip label='Email udlejning@fredericiabolig.com'>
+          <Link href='mailto:udlejning@fredericiabolig.com' color='black' whiteSpace="pre-line" ml={2}><IconButton aria-label='Mail' color='rgb(27,52,90)' icon={<MdEmail fontSize={30}/>} /></Link>
         </Tooltip>
           <Newsletter/>
       </Wrap>

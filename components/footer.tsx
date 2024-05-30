@@ -8,7 +8,7 @@ export default function Footer() {
             <Link href='tel:+4522996421' color='black' whiteSpace="pre-line" ml={2}>22 99 64 21</Link>
             </Text>
             <Text align={'center'}>E-mail: 
-            <Link href='mailto:annettekjaer2@yahoo.dk' color='black' whiteSpace="pre-line" ml={2}>annettekjaer2@yahoo.dk</Link>
+            <Link href='mailto:udlejning@fredericiabolig.com' color='black' whiteSpace="pre-line" ml={2}>udlejning@fredericiabolig.com</Link>
             </Text>
             <Text align={'center'} mb={8}>CVR: 35867708</Text>
 
