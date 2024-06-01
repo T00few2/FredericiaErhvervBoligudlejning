@@ -64,7 +64,7 @@ async function getDataEjendomme() {
 export default async function Page() {
   const lejligheder: Lejlighed[] = await getDataLejligheder();
   const ejendomme: Ejendom[] = await getDataEjendomme();
-  console.log(ejendomme)
+  
 
   return (
     
