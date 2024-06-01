@@ -17,7 +17,7 @@ import { IoCall } from "react-icons/io5";
 import { Metadata } from "next";
 import Footer from '../components/footer';
 
-import {Box, Container, Flex, Heading, Stack, Text, Link, SimpleGrid, Wrap, Grid, Image, Tooltip, IconButton, HStack} from '@chakra-ui/react'
+import {Highlight, Box, Container, Flex, Heading, Stack, Text, Link, SimpleGrid, Wrap, Grid, Image, Tooltip, IconButton, HStack} from '@chakra-ui/react'
 
 export const metadata: Metadata = {
   title: 'Fredericia Erhverv Boligudlejning',
@@ -114,6 +114,34 @@ export default async function Page() {
     </Tooltip>
   </Box>
   
+</Wrap>
+<Wrap spacingY={2} justify='center' mt={2} maxW={{base:'95vw', sm:'80vw', md:'60vw'}}>
+
+<Text mt={4} whiteSpace="pre-line" textAlign={'center'} fontWeight="bold">
+<Highlight
+    query={['familieejet']}
+    styles={{ px: '2', py: '1', rounded: 'full', bg: 'blue.100' }}
+  >
+Velkommen til Fredericia Erhverv Boligudlejning – et familieejet boligselskab med rødder i Fredericia.</Highlight><br/><br/>
+<Highlight
+    query={['ordentlig udlejer','velholdte lejligheder','fair priser','kontakt os for en fremvisning']}
+    styles={{ px: '2', py: '1', rounded: 'full', bg: 'blue.100' }}
+  >
+Vi stræber efter at være en ordentlig udlejer med velholdte lejligheder og fair priser. Med en portefølje på mere end 80 lejligheder i Fredericia kan vi imødekomme de fleste behov og har løbende ledige lejligheder.
+Se hvad vi har ledigt nedenfor og kontakt os for en fremvisning.</Highlight><br/><br/>
+<Highlight
+    query={['tilmelde dig vores nyhedsbrev']}
+    styles={{ px: '2', py: '1', rounded: 'full', bg: 'blue.100' }}
+  >
+Hvis vi ikke har, hvad du leder efter, kan du tilmelde dig vores nyhedsbrev og få direkte besked, når der kommer nye ledige lejligheder.</Highlight><br/><br/>
+<Highlight
+    query={['Velkommen hjem']}
+    styles={{ px: '2', py: '1', rounded: 'full', bg: 'blue.100' }}
+  >
+Velkommen hjem – hos Fredericia Erhverv Boligudlejning.</Highlight>
+
+</Text>
+
 </Wrap>
 
         <Stack  spacing={4} as={Container} maxW={'5xl'} mt={12} mb={20} align={'center'}>
