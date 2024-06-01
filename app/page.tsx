@@ -7,6 +7,7 @@ import Thumbnails from '../components/thumbnails';
 import { Lejlighed } from '../queries/lejlighed';
 import { Ejendom } from '../queries/ejendom';
 import { FaMobileAlt } from "react-icons/fa";
+import { FaFacebook } from 'react-icons/fa';
 import { MdEmail, MdCall } from "react-icons/md";
 import { FaSms } from "react-icons/fa";
 import { IoMdListBox } from "react-icons/io";
@@ -74,13 +75,14 @@ export default async function Page() {
       <Image objectFit={'contain'} maxW={{base:'95vw', sm:'80vw', md:'60vw'}} mb={{base:1, sm:2, md:4}} src='logo.jpg'/>
       </Flex>
       
-        <HStack mt={2} spacing={5} justify={'center'}>
+      <Wrap spacingY={2} justify='center' mt={2}>
+        
   
   <Box textAlign="center" alignItems="center">
     <Tooltip label='Ring 22 99 64 21'>
       <Link href='tel:+4522996421' color='black' whiteSpace="pre-line">
         <IconButton aria-label='Ring' color='rgb(27,52,90)' icon={<MdCall fontSize={30} />} />
-        <Text mt={2} fontWeight="bold">Ring</Text>
+        <Text mt={2} fontWeight="bold" width={'100px'}>Ring</Text>
       </Link>
     </Tooltip>
     </Box>
@@ -89,7 +91,7 @@ export default async function Page() {
     <Tooltip label='SMS 22 99 64 21'>
       <Link href='sms:+4522996421' color='black' whiteSpace="pre-line">
         <IconButton aria-label='SMS' color='rgb(27,52,90)' icon={<FaSms fontSize={30}/>} />
-        <Text mt={2} fontWeight="bold">SMS</Text>
+        <Text mt={2} fontWeight="bold" width={'100px'}>SMS</Text>
       </Link>
     </Tooltip>
   </Box>
@@ -97,14 +99,22 @@ export default async function Page() {
     <Tooltip label='Email udlejning@fredericiabolig.com'>
       <Link href='mailto:udlejning@fredericiabolig.com' color='black' whiteSpace="pre-line">
         <IconButton aria-label='Mail' color='rgb(27,52,90)' icon={<MdEmail fontSize={30}/>} />
-        <Text mt={2} fontWeight="bold">E-mail</Text>
+        <Text mt={2} fontWeight="bold" width={'100px'}>E-mail</Text>
       </Link>
     </Tooltip>
   </Box>
   
     <Newsletter />
+    <Box textAlign="center" alignItems="center">
+    <Tooltip label='Facebook'>
+      <Link href='https://www.facebook.com/share/Kg8pKAhod4BdmFP2/' color='black' whiteSpace="pre-line">
+        <IconButton aria-label='Mail' color='rgb(27,52,90)' icon={<FaFacebook fontSize={30}/>} />
+        <Text mt={2} fontWeight="bold" width={'100px'}>Facebook</Text>
+      </Link>
+    </Tooltip>
+  </Box>
   
-  </HStack>
+</Wrap>
 
         <Stack  spacing={4} as={Container} maxW={'5xl'} mt={12} mb={20} align={'center'}>
         <SimpleGrid spacing={8} minChildWidth='290px'>
