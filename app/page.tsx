@@ -115,7 +115,7 @@ export default async function Page() {
   </Box>
   
 </Wrap>
-<Wrap spacingY={2} justify='center' mt={2} maxW={{base:'95vw', sm:'80vw', md:'60vw'}}>
+<Wrap spacingY={2} justify='center' mt={2} maxW={{base:'90vw', sm:'80vw', md:'60vw'}}>
 
 <Text mt={4} whiteSpace="pre-line" textAlign={'center'} fontWeight="bold">
 <Highlight
