@@ -80,7 +80,7 @@ const Newsletter = () => {
         
         
         <Tooltip label='Tilmeld mailliste'>
-          <Box textAlign="center" onClick = {onOpen}>
+          <Box textAlign="center" alignItems="center" onClick = {onOpen}>
             <IconButton aria-label='mail'  color='rgb(27,52,90)' icon={<MdPlaylistAddCheck  fontSize={30}/>} ml={2}/>
             <Text mt={2} fontWeight="bold">Nyhedsbrev</Text>
           </Box>

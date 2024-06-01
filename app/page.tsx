@@ -16,7 +16,7 @@ import { IoCall } from "react-icons/io5";
 import { Metadata } from "next";
 import Footer from '../components/footer';
 
-import {Box, Container, Flex, Heading, Stack, Text, Link, SimpleGrid, Wrap, Grid, Image, Tooltip, IconButton} from '@chakra-ui/react'
+import {Box, Container, Flex, Heading, Stack, Text, Link, SimpleGrid, Wrap, Grid, Image, Tooltip, IconButton, HStack} from '@chakra-ui/react'
 
 export const metadata: Metadata = {
   title: 'Fredericia Erhverv Boligudlejning',
@@ -73,35 +73,39 @@ export default async function Page() {
       
       <Image objectFit={'contain'} maxW={{base:'95vw', sm:'80vw', md:'60vw'}} mb={{base:1, sm:2, md:4}} src='logo.jpg'/>
       </Flex>
-      <Wrap justify={'center'} flexWrap={'wrap'} mt={4} spacing={4}>
-  <Flex direction="column" align="center" m={2}>
+      
+        <HStack spacing={5} justify={'center'}>
+  
+  <Box textAlign="center" alignItems="center">
     <Tooltip label='Ring 22 99 64 21'>
       <Link href='tel:+4522996421' color='black' whiteSpace="pre-line">
         <IconButton aria-label='Ring' color='rgb(27,52,90)' icon={<MdCall fontSize={30} />} />
         <Text mt={2} fontWeight="bold">Ring</Text>
       </Link>
     </Tooltip>
-  </Flex>
-  <Flex direction="column" align="center" m={2}>
+    </Box>
+  
+    <Box textAlign="center" alignItems="center">
     <Tooltip label='SMS 22 99 64 21'>
       <Link href='sms:+4522996421' color='black' whiteSpace="pre-line">
         <IconButton aria-label='SMS' color='rgb(27,52,90)' icon={<FaSms fontSize={30}/>} />
         <Text mt={2} fontWeight="bold">SMS</Text>
       </Link>
     </Tooltip>
-  </Flex>
-  <Flex direction="column" align="center" m={2}>
+  </Box>
+  <Box textAlign="center" alignItems="center">
     <Tooltip label='Email udlejning@fredericiabolig.com'>
       <Link href='mailto:udlejning@fredericiabolig.com' color='black' whiteSpace="pre-line">
         <IconButton aria-label='Mail' color='rgb(27,52,90)' icon={<MdEmail fontSize={30}/>} />
         <Text mt={2} fontWeight="bold">E-mail</Text>
       </Link>
     </Tooltip>
-  </Flex>
-  <Flex direction="column" align="center" m={2}>
+  </Box>
+  
     <Newsletter />
-  </Flex>
-</Wrap>
+  
+  </HStack>
+
         <Stack  spacing={4} as={Container} maxW={'5xl'} mt={12} mb={20} align={'center'}>
         <SimpleGrid spacing={8} minChildWidth='290px'>
           <Thumbnails lejligheder={lejligheder} ejendomme={ejendomme}/>
