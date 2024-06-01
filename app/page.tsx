@@ -74,7 +74,7 @@ export default async function Page() {
       <Image objectFit={'contain'} maxW={{base:'95vw', sm:'80vw', md:'60vw'}} mb={{base:1, sm:2, md:4}} src='logo.jpg'/>
       </Flex>
       
-        <HStack spacing={5} justify={'center'}>
+        <HStack mt={2} spacing={5} justify={'center'}>
   
   <Box textAlign="center" alignItems="center">
     <Tooltip label='Ring 22 99 64 21'>
