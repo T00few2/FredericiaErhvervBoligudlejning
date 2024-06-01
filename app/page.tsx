@@ -107,7 +107,7 @@ export default async function Page() {
     <Newsletter />
     <Box textAlign="center" alignItems="center">
     <Tooltip label='Facebook'>
-      <Link href='https://www.facebook.com/share/Kg8pKAhod4BdmFP2/' color='black' whiteSpace="pre-line">
+      <Link href='https://www.facebook.com/share/Kg8pKAhod4BdmFP2/' color='black' whiteSpace="pre-line" target="_blank">
         <IconButton aria-label='Mail' color='rgb(27,52,90)' icon={<FaFacebook fontSize={30}/>} />
         <Text mt={2} fontWeight="bold" width={'100px'}>Facebook</Text>
       </Link>
