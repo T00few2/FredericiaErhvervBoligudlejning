@@ -73,18 +73,35 @@ export default async function Page() {
       
       <Image objectFit={'contain'} maxW={{base:'95vw', sm:'80vw', md:'60vw'}} mb={{base:1, sm:2, md:4}} src='logo.jpg'/>
       </Flex>
-      <Wrap justify={'center'} flexWrap={'wrap'} mt={4}>
-        <Tooltip label='Ring 22 99 64 21'>
-          <Link href='tel:+4522996421' color='black' whiteSpace="pre-line" ml={2}><IconButton aria-label='Ring' color='rgb(27,52,90)' icon={<MdCall  fontSize={30} />}></IconButton></Link>
-        </Tooltip>
-        <Tooltip label='SMS 22 99 64 21'>
-          <Link href='sms:+4522996421' color='black' whiteSpace="pre-line" ml={2}><IconButton aria-label='SMS' color='rgb(27,52,90)' icon={<FaSms fontSize={30}/>} /></Link> 
-        </Tooltip>
-        <Tooltip label='Email udlejning@fredericiabolig.com'>
-          <Link href='mailto:udlejning@fredericiabolig.com' color='black' whiteSpace="pre-line" ml={2}><IconButton aria-label='Mail' color='rgb(27,52,90)' icon={<MdEmail fontSize={30}/>} /></Link>
-        </Tooltip>
-          <Newsletter/>
-      </Wrap>
+      <Wrap justify={'center'} flexWrap={'wrap'} mt={4} spacing={4}>
+  <Flex direction="column" align="center" m={2}>
+    <Tooltip label='Ring 22 99 64 21'>
+      <Link href='tel:+4522996421' color='black' whiteSpace="pre-line">
+        <IconButton aria-label='Ring' color='rgb(27,52,90)' icon={<MdCall fontSize={30} />} />
+        <Text mt={2} fontWeight="bold">Ring</Text>
+      </Link>
+    </Tooltip>
+  </Flex>
+  <Flex direction="column" align="center" m={2}>
+    <Tooltip label='SMS 22 99 64 21'>
+      <Link href='sms:+4522996421' color='black' whiteSpace="pre-line">
+        <IconButton aria-label='SMS' color='rgb(27,52,90)' icon={<FaSms fontSize={30}/>} />
+        <Text mt={2} fontWeight="bold">SMS</Text>
+      </Link>
+    </Tooltip>
+  </Flex>
+  <Flex direction="column" align="center" m={2}>
+    <Tooltip label='Email udlejning@fredericiabolig.com'>
+      <Link href='mailto:udlejning@fredericiabolig.com' color='black' whiteSpace="pre-line">
+        <IconButton aria-label='Mail' color='rgb(27,52,90)' icon={<MdEmail fontSize={30}/>} />
+        <Text mt={2} fontWeight="bold">E-mail</Text>
+      </Link>
+    </Tooltip>
+  </Flex>
+  <Flex direction="column" align="center" m={2}>
+    <Newsletter />
+  </Flex>
+</Wrap>
         <Stack  spacing={4} as={Container} maxW={'5xl'} mt={12} mb={20} align={'center'}>
         <SimpleGrid spacing={8} minChildWidth='290px'>
           <Thumbnails lejligheder={lejligheder} ejendomme={ejendomme}/>

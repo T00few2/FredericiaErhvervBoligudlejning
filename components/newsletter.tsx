@@ -1,7 +1,7 @@
 'use client'
 import { FormEvent, useState } from "react";
 import axios from "axios";
-import { Button, Input, Wrap, useToast, VStack, Tooltip, Modal, ModalHeader, ModalBody,ModalOverlay, ModalContent, ModalCloseButton, IconButton, Text, Flex, SimpleGrid, Textarea } from "@chakra-ui/react";
+import { Box, Button, Input, Wrap, useToast, VStack, Tooltip, Modal, ModalHeader, ModalBody,ModalOverlay, ModalContent, ModalCloseButton, IconButton, Text, Flex, SimpleGrid, Textarea } from "@chakra-ui/react";
 import { useDisclosure } from '@chakra-ui/react';
 import { FaRegNewspaper } from "react-icons/fa";
 import { IoMdListBox } from "react-icons/io";
@@ -77,13 +77,16 @@ const Newsletter = () => {
 
   return (
     <div>
-        <Flex align="center" flexDirection="column"> {/* Flex container to align items vertically */}
-        <Flex align="center"> {/* Flex container to align items horizontally */}
+        
+        
         <Tooltip label='Tilmeld mailliste'>
-            <IconButton aria-label='mail' onClick = {onOpen} color='rgb(27,52,90)' icon={<MdPlaylistAddCheck  fontSize={30}/>} ml={2}/>
-          </Tooltip>
-        </Flex>
-        </Flex>
+          <Box textAlign="center" onClick = {onOpen}>
+            <IconButton aria-label='mail'  color='rgb(27,52,90)' icon={<MdPlaylistAddCheck  fontSize={30}/>} ml={2}/>
+            <Text mt={2} fontWeight="bold">Nyhedsbrev</Text>
+          </Box>
+        </Tooltip>
+        
+        
   
   
     <Modal isOpen={isOpen} onClose={onClose} motionPreset='scale' size ={{ base:'sm', sm: 'xl', md:'3xl'}} scrollBehavior={'inside'}>
