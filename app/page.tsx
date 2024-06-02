@@ -120,12 +120,12 @@ export default async function Page() {
   <Box maxW={{ base:'90vw', sm:'80vw', md:'60vw' }}>
 
     <Wrap spacingY={2}>
-      <Text mt={4} whiteSpace="pre-line" textAlign={'center'} fontWeight="bold" lineHeight={2.5}>
+      <Text mt={4} whiteSpace="pre-line" textAlign={'center'} fontWeight="bold" lineHeight={2.2}>
        
           Velkommen til Fredericia Erhverv Boligudlejning – et 
         <Popover>
             <PopoverTrigger>
-              <Button ml='1' mr='1' verticalAlign={'center'} backgroundColor={'rgb(27,52,90)'} textColor='White' rounded='full' fontWeight={'bold'} px='2' py='1' size={'md'} height={'30px'} _hover={{ bg: 'blue.600' }} display={'inline-flex'}>familieejet boligselskab</Button>
+              <Button ml='1' mr='1' verticalAlign={'center'} backgroundColor={'#CBD5E0'}  rounded='full' fontWeight={'bold'} px='2' py='1' size={'md'} height={'30px'} _hover={{ bg: 'rgb(27,52,90)', textColor: 'White' }} display={'inline-flex'}>familieejet boligselskab</Button>
             </PopoverTrigger>
             <Portal>
               <PopoverContent borderWidth={0}>
@@ -133,7 +133,7 @@ export default async function Page() {
                 <PopoverBody lineHeight={2} backgroundColor={'rgb(27,52,90)'} textColor={'White'} fontWeight={'bold'} rounded={'10'}>
                 <Highlight
                   query={['ordentlig udlejer','velholdte lejligheder','fair priser','kontakt os for en fremvisning']}
-                  styles={{ px: '2', py: '1', rounded: 'full', bg: 'blue.100' }}>
+                  styles={{ px: '2', py: '1', rounded: 'full', bg: '#CBD5E0' }}>
                   Vi stræber efter at være en ordentlig udlejer med velholdte lejligheder og fair priser. Med en portefølje på mere end 80 lejligheder i Fredericia kan vi imødekomme de fleste behov og har løbende ledige lejligheder.
                 </Highlight>
                  
@@ -145,7 +145,7 @@ export default async function Page() {
         
         <Popover>
             <PopoverTrigger>
-            <Button ml='1' mr='1' verticalAlign={'center'} backgroundColor={'rgb(27,52,90)'} textColor='White' rounded='full' fontWeight={'bold'} px='2' py='1' size={'md'} height={'30px'} _hover={{ bg: 'blue.600' }} display={'inline-flex'}>kontakt os for en fremvisning</Button>
+            <Button ml='1' mr='1' verticalAlign={'center'} backgroundColor={'#CBD5E0'}  rounded='full' fontWeight={'bold'} px='2' py='1' size={'md'} height={'30px'} _hover={{ bg: 'rgb(27,52,90)', textColor: 'White' }} display={'inline-flex'}>kontakt os for en fremvisning</Button>
             </PopoverTrigger>
             <Portal>
               <PopoverContent width="fit-content" minWidth="200px">
@@ -190,7 +190,7 @@ export default async function Page() {
         </Highlight>
         <Popover>
             <PopoverTrigger>
-            <Button ml='1' mr='1' verticalAlign={'center'} backgroundColor={'rgb(27,52,90)'} textColor='White' rounded='full' fontWeight={'bold'} px='2' py='1' size={'md'} height={'30px'} _hover={{ bg: 'blue.600' }} display={'inline-flex'}>tilmeld dig vores nyhedsmail</Button>
+            <Button ml='1' mr='1' verticalAlign={'center'} backgroundColor={'#CBD5E0'}  rounded='full' fontWeight={'bold'} px='2' py='1' size={'md'} height={'30px'} _hover={{ bg: 'rgb(27,52,90)', textColor: 'White' }} display={'inline-flex'}>tilmeld dig vores nyhedsmail</Button>
             </PopoverTrigger>
             <Portal>
               <PopoverContent width="fit-content">
