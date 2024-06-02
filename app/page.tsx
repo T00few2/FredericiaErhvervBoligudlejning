@@ -190,14 +190,22 @@ export default async function Page() {
         </Highlight>
         <Popover>
             <PopoverTrigger>
-            <Button ml='1' mr='1' verticalAlign={'center'} backgroundColor={'#CBD5E0'}  rounded='full' fontWeight={'bold'} px='2' py='1' size={'md'} height={'30px'} _hover={{ bg: 'rgb(27,52,90)', textColor: 'White' }} display={'inline-flex'}>tilmeld dig vores nyhedsmail</Button>
+            <Button ml='1' mr='1' verticalAlign={'center'} backgroundColor={'#CBD5E0'}  rounded='full' fontWeight={'bold'} px='2' py='1' size={'md'} height={'30px'} _hover={{ bg: 'rgb(27,52,90)', textColor: 'White' }} display={'inline-flex'}>tilmeld dig vores nyhedsmail eller Facebook side</Button>
             </PopoverTrigger>
             <Portal>
               <PopoverContent width="fit-content">
                 <PopoverArrow />
                 
                 <PopoverBody backgroundColor={'blue.50'} display='flex' alignItems='center' justifyContent='space-between'>
-                <Newsletter />
+                  <Newsletter />
+                    <Box textAlign="center" alignItems="center">
+                    <Tooltip label='Facebook'>
+                      <Link href='https://www.facebook.com/share/Kg8pKAhod4BdmFP2/' color='black' whiteSpace="pre-line" target="_blank">
+                        <IconButton aria-label='Mail' color='rgb(27,52,90)' icon={<FaFacebook fontSize={30}/>} />
+                        <Text mt={2} fontWeight="bold" width={'100px'}>Facebook</Text>
+                      </Link>
+                    </Tooltip>
+                  </Box>
                 </PopoverBody>
               </PopoverContent>
             </Portal>
