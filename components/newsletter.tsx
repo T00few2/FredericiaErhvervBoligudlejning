@@ -77,20 +77,13 @@ const Newsletter = () => {
 
   return (
     <div>
-        
-        
         <Tooltip label='Tilmeld mailliste'>
           <Box textAlign="center" alignItems="center" onClick = {onOpen} cursor="pointer" _hover={{ textDecoration: 'underline' }}>
             <IconButton aria-label='mail'  color='rgb(27,52,90)' icon={<MdPlaylistAddCheck  fontSize={30}/>}/>
             <Text mt={2} fontWeight="bold" width={'100px'}>Nyhedsbrev</Text>
           </Box>
         </Tooltip>
-        
-        
-  
-  
     <Modal isOpen={isOpen} onClose={onClose} motionPreset='scale' size ={{ base:'sm', sm: 'xl', md:'3xl'}} scrollBehavior={'inside'}>
-              
               <ModalOverlay       
               bg='blackAlpha.700'
               backdropFilter='auto'
@@ -101,7 +94,7 @@ const Newsletter = () => {
               <ModalHeader fontSize={'3xl'} fontWeight={'700'}>Mailliste</ModalHeader>
               <ModalCloseButton />
               <ModalBody>
-                <Text mb={4}>Tilmeld dig vores mail liste og få besked når der kommer ledige ledligheder</Text>
+                <Text mb={4}>Tilmeld dig vores mail liste og få direkte besked når der kommer ledige ledligheder</Text>
              
               <form onSubmit={handleSubscribe}>
                 <SimpleGrid columns={{ base:1, sm: 1, md:2}} spacing={4}>

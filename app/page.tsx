@@ -120,23 +120,32 @@ export default async function Page() {
   <Box maxW={{ base:'90vw', sm:'80vw', md:'60vw' }}>
 
     <Wrap spacingY={2}>
-      <Text mt={4} whiteSpace="pre-line" textAlign={'center'} fontWeight="bold">
-        <Highlight
-          query={['familieejet']}
-          styles={{ px: '2', py: '1', rounded: 'full', bg: 'blue.100' }}
-        >
-          Velkommen til Fredericia Erhverv Boligudlejning – et familieejet boligselskab med rødder i Fredericia.
-        </Highlight><br/><br/>
-        <Highlight
-          query={['ordentlig udlejer','velholdte lejligheder','fair priser','kontakt os for en fremvisning']}
-          styles={{ px: '2', py: '1', rounded: 'full', bg: 'blue.100' }}
-        >
-          Vi stræber efter at være en ordentlig udlejer med velholdte lejligheder og fair priser. Med en portefølje på mere end 80 lejligheder i Fredericia kan vi imødekomme de fleste behov og har løbende ledige lejligheder.
-          Se hvad vi har ledigt nedenfor og 
-        </Highlight>
+      <Text mt={4} whiteSpace="pre-line" textAlign={'center'} fontWeight="bold" lineHeight={2.5}>
+       
+          Velkommen til Fredericia Erhverv Boligudlejning – et 
         <Popover>
             <PopoverTrigger>
-              <Button ml='1' verticalAlign={'center'} backgroundColor={'blue.100'} rounded='full' fontWeight={'bold'} px='2' py='1' size={'md'} height={'30px'} _hover={{ bg: 'blue.300' }} display={'inline-flex'}>kontakt os for en fremvisning</Button>
+              <Button ml='1' mr='1' verticalAlign={'center'} backgroundColor={'rgb(27,52,90)'} textColor='White' rounded='full' fontWeight={'bold'} px='2' py='1' size={'md'} height={'30px'} _hover={{ bg: 'blue.600' }} display={'inline-flex'}>familieejet boligselskab</Button>
+            </PopoverTrigger>
+            <Portal>
+              <PopoverContent borderWidth={0}>
+                <PopoverArrow />
+                <PopoverBody lineHeight={2} backgroundColor={'rgb(27,52,90)'} textColor={'White'} fontWeight={'bold'} rounded={'10'}>
+                <Highlight
+                  query={['ordentlig udlejer','velholdte lejligheder','fair priser','kontakt os for en fremvisning']}
+                  styles={{ px: '2', py: '1', rounded: 'full', bg: 'blue.100' }}>
+                  Vi stræber efter at være en ordentlig udlejer med velholdte lejligheder og fair priser. Med en portefølje på mere end 80 lejligheder i Fredericia kan vi imødekomme de fleste behov og har løbende ledige lejligheder.
+                </Highlight>
+                 
+                </PopoverBody>
+              </PopoverContent>
+            </Portal>
+          </Popover>
+          med rødder i Fredericia. <br/>Se hvad vi har ledigt nedenfor og 
+        
+        <Popover>
+            <PopoverTrigger>
+            <Button ml='1' mr='1' verticalAlign={'center'} backgroundColor={'rgb(27,52,90)'} textColor='White' rounded='full' fontWeight={'bold'} px='2' py='1' size={'md'} height={'30px'} _hover={{ bg: 'blue.600' }} display={'inline-flex'}>kontakt os for en fremvisning</Button>
             </PopoverTrigger>
             <Portal>
               <PopoverContent width="fit-content" minWidth="200px">
@@ -173,20 +182,31 @@ export default async function Page() {
               </PopoverContent>
             </Portal>
           </Popover>
-        <br/><br/>
+        <br/>
         <Highlight
           query={['tilmeld dig vores nyhedsmail']}
-          styles={{ px: '2', py: '1', rounded: 'full', bg: 'blue.100' }}
-        >
-          Kan vi ikke opfylde dine ønsker lige nu, så 
-          tilmeld dig vores nyhedsmail, og du vil få direkte besked, når der er nye ledige lejligheder.
-        </Highlight><br/><br/>
-        <Highlight
-          query={['Velkommen hjem']}
-          styles={{ px: '2', py: '1', rounded: 'full', bg: 'blue.100' }}
-        >
-          Velkommen hjem – hos Fredericia Erhverv Boligudlejning.
+          styles={{ px: '2', py: '1', rounded: 'full', bg: 'blue.100' }}>
+          Kan vi ikke opfylde dine ønsker lige nu, så
         </Highlight>
+        <Popover>
+            <PopoverTrigger>
+            <Button ml='1' mr='1' verticalAlign={'center'} backgroundColor={'rgb(27,52,90)'} textColor='White' rounded='full' fontWeight={'bold'} px='2' py='1' size={'md'} height={'30px'} _hover={{ bg: 'blue.600' }} display={'inline-flex'}>tilmeld dig vores nyhedsmail</Button>
+            </PopoverTrigger>
+            <Portal>
+              <PopoverContent width="fit-content">
+                <PopoverArrow />
+                
+                <PopoverBody backgroundColor={'blue.50'} display='flex' alignItems='center' justifyContent='space-between'>
+                <Newsletter />
+                </PopoverBody>
+              </PopoverContent>
+            </Portal>
+          </Popover>
+          og få direkte besked, når der er nye ledige lejligheder.
+        <br/>
+        
+          Velkommen hjem – hos Fredericia Erhverv Boligudlejning!
+        
       </Text>
     </Wrap>
 
