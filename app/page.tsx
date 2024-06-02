@@ -135,10 +135,10 @@ export default async function Page() {
           Se hvad vi har ledigt nedenfor og kontakt os for en fremvisning.
         </Highlight><br/><br/>
         <Highlight
-          query={['tilmelde dig vores nyhedsbrev']}
+          query={['tilmeld dig vores nyhedsmail']}
           styles={{ px: '2', py: '1', rounded: 'full', bg: 'blue.100' }}
         >
-          Hvis vi ikke har, hvad du leder efter, kan du tilmelde dig vores nyhedsbrev og få direkte besked, når der kommer nye ledige lejligheder.
+          Kan vi ikke opfylde dine ønsker lige nu, så tilmeld dig vores nyhedsmail, og du vil få direkte besked, når der er nye ledige lejligheder.
         </Highlight><br/><br/>
         <Highlight
           query={['Velkommen hjem']}
