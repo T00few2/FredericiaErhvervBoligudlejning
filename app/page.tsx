@@ -136,7 +136,7 @@ export default async function Page() {
         </Highlight>
         <Popover>
             <PopoverTrigger>
-              <Button verticalAlign={'center'} backgroundColor={'blue.100'} rounded='full' fontWeight={'bold'} px='2' py='1' size={'md'} height={'30px'} _hover={{ bg: 'blue.300' }} display={'inline-flex'}>kontakt os for en fremvisning</Button>
+              <Button ml='1' verticalAlign={'center'} backgroundColor={'blue.100'} rounded='full' fontWeight={'bold'} px='2' py='1' size={'md'} height={'30px'} _hover={{ bg: 'blue.300' }} display={'inline-flex'}>kontakt os for en fremvisning</Button>
             </PopoverTrigger>
             <Portal>
               <PopoverContent width="fit-content" minWidth="200px">
