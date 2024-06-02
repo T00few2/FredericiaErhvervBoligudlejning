@@ -134,7 +134,7 @@ export default async function Page() {
                 <Highlight
                   query={['ordentlig udlejer','velholdte lejligheder','fair priser','kontakt os for en fremvisning']}
                   styles={{ px: '2', py: '1', rounded: 'full', bg: '#CBD5E0' }}>
-                  Vi stræber efter at være en ordentlig udlejer med velholdte lejligheder og fair priser. Med en portefølje på mere end 80 lejligheder i Fredericia kan vi imødekomme de fleste behov og har løbende ledige lejligheder.
+                  Vi stræber efter at være en ordentlig udlejer med velholdte lejligheder og en fair leje. Med en portefølje på mere end 80 lejligheder i Fredericia kan vi imødekomme de fleste behov og har løbende ledige lejligheder.
                 </Highlight>
                  
                 </PopoverBody>
