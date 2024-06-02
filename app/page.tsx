@@ -17,7 +17,7 @@ import { IoCall } from "react-icons/io5";
 import { Metadata } from "next";
 import Footer from '../components/footer';
 
-import {Highlight, Box, Container, Flex, Heading, Stack, Text, Link, SimpleGrid, Wrap, Grid, Image, Tooltip, IconButton, HStack} from '@chakra-ui/react'
+import {Highlight, Popover,PopoverTrigger, PopoverCloseButton, PopoverBody, PopoverArrow, Portal, PopoverContent, Button, Box, Container, Flex, Heading, Stack, Text, Link, SimpleGrid, Wrap, Grid, Image, Tooltip, IconButton, HStack} from '@chakra-ui/react'
 
 export const metadata: Metadata = {
   title: 'Fredericia Erhverv Boligudlejning',
@@ -132,13 +132,54 @@ export default async function Page() {
           styles={{ px: '2', py: '1', rounded: 'full', bg: 'blue.100' }}
         >
           Vi stræber efter at være en ordentlig udlejer med velholdte lejligheder og fair priser. Med en portefølje på mere end 80 lejligheder i Fredericia kan vi imødekomme de fleste behov og har løbende ledige lejligheder.
-          Se hvad vi har ledigt nedenfor og kontakt os for en fremvisning.
-        </Highlight><br/><br/>
+          Se hvad vi har ledigt nedenfor og 
+        </Highlight>
+        <Popover>
+            <PopoverTrigger>
+              <Button backgroundColor={'blue.100'} rounded='full' fontWeight={'bold'} px='2' py='1' size={'md'} height={'30px'} _hover={{ bg: 'blue.300' }} display={'inline'}>kontakt os for en fremvisning</Button>
+            </PopoverTrigger>
+            <Portal>
+              <PopoverContent width="fit-content" minWidth="200px">
+                <PopoverArrow />
+                
+                <PopoverBody backgroundColor={'blue.50'} display='flex' alignItems='center' justifyContent='space-between'>
+                  <Wrap spacingY={2} justify='center' mt={2}>
+                  <Box textAlign="center" alignItems="center">
+                  <Tooltip label='Ring 22 99 64 21'>
+                    <Link href='tel:+4522996421' color='black' whiteSpace="pre-line">
+                      <IconButton aria-label='Ring' color='rgb(27,52,90)' icon={<MdCall fontSize={30} />} />
+                      <Text mt={2} fontWeight="bold" width={'100px'}>Ring</Text>
+                    </Link>
+                  </Tooltip>
+                  </Box>
+                  <Box textAlign="center" alignItems="center">
+                    <Tooltip label='SMS 22 99 64 21'>
+                      <Link href='sms:+4522996421' color='black' whiteSpace="pre-line">
+                        <IconButton aria-label='SMS' color='rgb(27,52,90)' icon={<FaSms fontSize={30}/>} />
+                        <Text mt={2} fontWeight="bold" width={'100px'}>SMS</Text>
+                      </Link>
+                    </Tooltip>
+                  </Box>
+                  <Box textAlign="center" alignItems="center">
+                    <Tooltip label='Email udlejning@fredericiabolig.com'>
+                      <Link href='mailto:udlejning@fredericiabolig.com' color='black' whiteSpace="pre-line">
+                        <IconButton aria-label='Mail' color='rgb(27,52,90)' icon={<MdEmail fontSize={30}/>} />
+                        <Text mt={2} fontWeight="bold" width={'100px'}>E-mail</Text>
+                      </Link>
+                    </Tooltip>
+                  </Box>
+                  </Wrap>
+                </PopoverBody>
+              </PopoverContent>
+            </Portal>
+          </Popover>
+        <br/><br/>
         <Highlight
           query={['tilmeld dig vores nyhedsmail']}
           styles={{ px: '2', py: '1', rounded: 'full', bg: 'blue.100' }}
         >
-          Kan vi ikke opfylde dine ønsker lige nu, så tilmeld dig vores nyhedsmail, og du vil få direkte besked, når der er nye ledige lejligheder.
+          Kan vi ikke opfylde dine ønsker lige nu, så 
+          tilmeld dig vores nyhedsmail, og du vil få direkte besked, når der er nye ledige lejligheder.
         </Highlight><br/><br/>
         <Highlight
           query={['Velkommen hjem']}
