@@ -141,7 +141,7 @@ export default async function Page() {
               </PopoverContent>
             </Portal>
           </Popover>
-          med rødder i Fredericia. <br/>Se hvad vi har ledigt nedenfor og 
+          med rødder i Fredericia. Se hvad vi har ledigt nedenfor og 
         
         <Popover>
             <PopoverTrigger>
@@ -182,7 +182,7 @@ export default async function Page() {
               </PopoverContent>
             </Portal>
           </Popover>
-        <br/>
+        
         <Highlight
           query={['tilmeld dig vores nyhedsmail']}
           styles={{ px: '2', py: '1', rounded: 'full', bg: 'blue.100' }}>
@@ -211,7 +211,7 @@ export default async function Page() {
             </Portal>
           </Popover>
           og få direkte besked, når der er nye ledige lejligheder.
-        <br/>
+        <br/><br/>
         
           Velkommen hjem – hos Fredericia Erhverv Boligudlejning!
         
@@ -221,9 +221,6 @@ export default async function Page() {
   </Box>
 
 </Flex>
-
-
-
         <Stack  spacing={4} as={Container} maxW={'5xl'} mt={12} mb={20} align={'center'}>
         <SimpleGrid spacing={8} minChildWidth='290px'>
           <Thumbnails lejligheder={lejligheder} ejendomme={ejendomme}/>
