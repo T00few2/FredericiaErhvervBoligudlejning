@@ -3,7 +3,7 @@ import { Text, Link } from "@chakra-ui/react"
 export default function Footer() {
     return(
         <div>
-            <Text align={'center'} fontWeight={600}>Fredericia Erhverv ApS</Text>
+            <Text mt={4} align={'center'} fontWeight={600}>Fredericia Erhverv ApS</Text>
             <Text align={'center'}>Telefon: 
             <Link href='tel:+4522996421' color='black' whiteSpace="pre-line" ml={2}>22 99 64 21</Link>
             </Text>
