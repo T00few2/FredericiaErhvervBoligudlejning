@@ -121,7 +121,7 @@ export default async function Page() {
           <Portal>
             <PopoverContent borderWidth={0}>
               <PopoverArrow />
-              <PopoverBody lineHeight={2} backgroundColor={'rgb(27,52,90)'} textColor={'White'} fontWeight={'bold'} rounded={'10'}>
+              <PopoverBody lineHeight={2} backgroundColor={'blue.50'} textColor={'rgb(27,52,90)'} fontWeight={'bold'} rounded={'10'}>
               <Highlight
                 query={['ordentlig udlejer','velholdte lejligheder','fair priser','kontakt os for en fremvisning']}
                 styles={{ px: '2', py: '1', rounded: 'full', bg: '#CBD5E0' }}>
