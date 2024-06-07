@@ -110,7 +110,7 @@ export default async function Page() {
         </Box>   
       </Wrap>
 
-<Flex justifyContent="center" alignItems="center" mt={2}>
+<Flex justifyContent="center" alignItems="center" mt={2} align={'center'} justifyItems={'center'}>
   <Box>
       <Text mt={4} whiteSpace="pre-line" textAlign={'center'} fontWeight="bold" lineHeight={2.2}>
       Velkommen til Fredericia Erhverv Boligudlejning – et 
